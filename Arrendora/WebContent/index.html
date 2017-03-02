@@ -1,10 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="moduloMain">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>CLIENTES</title>
+<link rel="stylesheet" href="css/apl_1.css"/>
+<script src="lib/angular.js"></script>
+<script src="js/indexJS.js"></script>
+
 </head>
+
 <body>
-JJO
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TESORERÍA
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLIENTES
+</div>
+
+
+<form action="" name="InfoClientes">
+
+
+
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerInfoCliente" align="left">
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ESTADO DE CLIENTE&nbsp;&nbsp;&nbsp;
+	<input type="text" ng-model="edoCte" size="1"  placeholder=" {{objeto.infoCliente.edo_cliente}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE&nbsp;&nbsp;&nbsp;
+	<input type="text" ng-model="greeting" size="8"  placeholder=" {{objeto.infoCliente.clave}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<!-- Clave BUC&nbsp;&nbsp;&nbsp;<input name="buc" type="text" ng-model="cvebuc" ng-pattern="/^[a-zA-Z]*$/" required /> -->
+CLAVE BUC&nbsp;&nbsp;&nbsp;
+<input name="buc" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" size="8" required  placeholder=" {{objeto.infoCliente.cve_buc}} " />
+ 	<span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+		La clave numérica BUC es requerida a 8 posiciones.
+	</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NOMBRE&nbsp;&nbsp;&nbsp;
+	<input name="nombre" type="text" ng-model="nombre" placeholder="Por capturar" ng-pattern="/^[a-zA-ZñÑ]*$/" required size="70"  placeholder=" {{objeto.infoCliente.nombre}} " /> 
+ 	<span style="color: red;" ng-show = "index.nombre.$touched && index.nombre.$invalid">
+		El campo nombre es obligatorio sin acentos.
+	</span>
+	
+	<br/><br/>
+	
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TIPO DE PERSONA&nbsp;&nbsp;&nbsp;<input type="text" ng-model="tipoP" size="1"  placeholder=" {{objeto.infoCliente.tipo_persona}} " /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+APELLIDO PATERNO&nbsp;&nbsp;&nbsp;<input type="text" ng-model="ApPat" placeholder=" {{objeto.infoCliente.ap_paterno}} "  /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+APELLIDO MATERNO&nbsp;&nbsp;&nbsp;<input type="text" ng-model="ApMat"  placeholder=" {{objeto.infoCliente.ap_materno}} " /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- R.F.C.&nbsp;&nbsp;&nbsp;<input name="rfc" type="text" ng-model="user.rfc" ng-model-options="{ updateOn: 'blur' }" required />  -->
+R.F.C.&nbsp;&nbsp;&nbsp;<input name="rfc" type="text" ng-model="user.rfc" ng-maxlength="13" required  placeholder=" {{objeto.infoCliente.rfc}} " />
+<br/><br/>
+ 
+
+<!-- {{index.rfc.$valid}} -->
+<span style="color: red;" ng-show = "index.rfc.$touched && index.rfc.$invalid">
+	El RFC es requerido a máximo 13 caracteres.
+</span>
+<!--       <span class="messages" ng-show="userForm.$submitted || userForm.name.$touched"> -->
+<!--         <span ng-show="userForm.name.$error.required">El campo es obligatorio.</span> -->
+<!--       </span> -->
+
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+C.U.R.P.&nbsp;&nbsp;&nbsp;<input type="text" ng-model="curp" size="20"  placeholder=" {{objeto.infoCliente.curp}} " /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+TIPO DE IDENTIFICACIÓN&nbsp;&nbsp;&nbsp;
+<select name="tipoID">
+   <option value="0">0</option> 
+   <option value="1">1</option> 
+   <option value="2">2</option>
+   <option value="3">3</option> 
+   <option value="4">4</option> 
+   <option value="5">5</option>
+   <option value="6">6</option> 
+</select> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NÚM. DE IDENTIFICACIÓN&nbsp;&nbsp;&nbsp;
+	<input type="text" ng-model="numId" size="20"  placeholder=" {{objeto.infoCliente.num_identificacion}} " /> 
+<br/><br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TIPO DE DOMICILIO&nbsp;&nbsp;&nbsp;
+	<input type="text" ng-model="tipoDom" size="3"  placeholder=" {{objeto.infoCliente.tipo_domicilio}} " /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+DOMICILIO EXTRANJERO&nbsp;&nbsp;&nbsp;
+	<input type="text" ng-model="domExt" size="20"  placeholder=" {{objeto.infoCliente.dom_extranjero}} " /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+FECHA DE CONTACTO&nbsp;&nbsp;&nbsp;
+<input type=date id=dt size="5"  placeholder=" {{objeto.infoCliente.fecha_contacto}} " >
+
+
+<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CÉDULA&nbsp;&nbsp;&nbsp;
+	<input type="text" ng-model="cedula" size="15"  placeholder=" {{objeto.infoCliente.cedula}} " /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SECTOR SENICREB&nbsp;&nbsp;&nbsp;
+	<input type="text" ng-model="sector" size="2"  placeholder=" {{objeto.infoCliente.cve_sect_senicreb}} " /> 
+	<input type="text" ng-model="senicre" size="20"  placeholder=" {{objeto.infoCliente.sect_senicreb}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ACT. SENICREB&nbsp;&nbsp;&nbsp;
+	<input type="text" ng-model="act" size="5" placeholder=" {{objeto.infoCliente.cve_act_senicreb}} "  /> 
+	<input type="text" ng-model="senicre2" size="20"  placeholder=" {{objeto.infoCliente.act_senicreb}} " />
+<br/><br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE PROMOTOR&nbsp;&nbsp;&nbsp;
+	<input type="text" ng-model="cve" size="5"  placeholder=" {{objeto.infoCliente.cve_promotor}} " /> 
+	<input type="text" ng-model="promotor" size="30"  placeholder=" {{objeto.infoCliente.promotor}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE CONTACTO&nbsp;&nbsp;&nbsp;
+	<input type="text" ng-model="cve2" size="5"   placeholder=" {{objeto.infoCliente.cve_contacto}} "  /> 
+	<input type="text" ng-model="contacto"  size="30"  placeholder=" {{objeto.infoCliente.contacto}} "  />
+<br/><br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+DÍA DE COBRO&nbsp;&nbsp;&nbsp;<input type="text" ng-model="diaCobro" size="5"  placeholder=" {{objeto.infoCliente.dia_cobro}} "  /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FORMA DE PAGO&nbsp;&nbsp;&nbsp;<input type="text" ng-model="formaPago" size="2"  placeholder=" {{objeto.infoCliente.forma_pago}} "  /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EDO. CTA.&nbsp;&nbsp;&nbsp;<input type="text" ng-model="edoCta" size="2"  placeholder=" {{objeto.infoCliente.edo_cuenta}} "  /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SUCURSAL COBRANZA&nbsp;&nbsp;&nbsp;<input type="text" ng-model="sucursal" size="3" placeholder="05"  placeholder=" {{objeto.infoCliente.cve_suc_cobranza}} "  /> 
+<input type="text" placeholder="MATRIZ" value="" ng-model="cobranza" size="10"  placeholder=" {{objeto.infoCliente.suc_cobranza}} " />
+
+
+<br/><br/>
+
+
+</div>
+
+</form>
+
+
+
+
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Módulo Representantes y Avales" name="btnF1" value=" ">REPRESENTANTES Y AVALES</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F2" title="Módulo Accionistas" name="btnF2" value=" ">ACCIONISTAS</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F3" title="Módulo Cuenta Cheques" name="btnF3" value=" ">CUENTAS CHEQUES</button>
+</div>
+
+
 </body>
 </html>

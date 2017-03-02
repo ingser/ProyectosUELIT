@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">					
+<head>
+<meta charset="ISO-8859-1">
+<title>CONSULTA CLIENTE</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/consultaClienteJS.js"></script>
+
+</head>
+
+
+<div class=lblTitleHea>
+<br/>
+&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;TABLAS Y PARAMETRIZACIÓN
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;CONSULTA POR CLIENTE
+</div>
+
+
+<form action="">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerConsultaCliente">
+
+
+&nbsp;&nbsp;&nbsp;CLIENTE&nbsp;&nbsp;&nbsp;
+	<input name="cteCve" type="text" size="5" ng-model="cte"  placeholder=" {{objeto.consultaCliente.cliente_cve}} " />
+	<input name="cteNomb" type="text" ng-model="edoCte" size="70"  placeholder=" {{objeto.consultaCliente.cliente_nombre}} " />
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;R.F.C.
+&nbsp;&nbsp;&nbsp;
+	<input name="rfc" type="text" ng-model="user.rfc" ng-maxlength="13" required  placeholder=" {{objeto.consultaCliente.rfc}} " /> 
+	<span style="color: red;" ng-show = "index.rfc.$touched && index.rfc.$invalid">
+		El RFC es requerido a máximo 13 caracteres.
+	</span>
+	<input type="text" ng-model="homocve" size="2"  placeholder=" {{objeto.consultaCliente.homoclave}} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tipo de Persona&nbsp;&nbsp;&nbsp;
+	<input name="tipoPers" type="text" ng-model="tipoP" size="2"  placeholder=" {{objeto.consultaCliente.tipo_persona}} " /> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Status&nbsp;&nbsp;&nbsp;
+<input name="status" type="text" ng-model="status"  size="2"  placeholder=" {{objeto.consultaCliente.status}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Clave BUC&nbsp;&nbsp;&nbsp;
+	<input name="cveBUC" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"  size="8" required  placeholder=" {{objeto.consultaCliente.cve_buc}} " />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	La clave numérica BUC es requerida a 8 posiciones.
+</span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FOBA&nbsp;&nbsp;&nbsp;
+<input name="foba" type="text" ng-model="foba" size="2"  placeholder=" {{objeto.consultaCliente.foba}} " />
+
+<br/><br/>
+&nbsp;&nbsp;&nbsp;CONTACTO&nbsp;&nbsp;&nbsp;
+	<input name="contacto" type="text" ng-model="contacto" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" size="2" required  placeholder=" {{objeto.consultaCliente.contacto}} " />
+ 	<span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+		Contacto es dato requerido a 8 posiciones.
+	</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CÉDULA&nbsp;&nbsp;&nbsp;
+	<input name="cedula" type="text" ng-model="cedula" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" size="8" required  placeholder=" {{objeto.consultaCliente.cedula}} " />
+ 	<span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+		Cédula es dato requerido a 8 posiciones.
+	</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SEGMENTO&nbsp;&nbsp;&nbsp;
+	<input name="segmento" type="text" ng-model="segmento" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" size="2" required  placeholder=" {{objeto.consultaCliente.segmento}} " />
+ 	<span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+		Segmento es dato requerido a 8 posiciones.
+	</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CNBYV&nbsp;&nbsp;&nbsp;
+	<input name="cnbyv" type="text" ng-model="cnbyv" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" size="2" required  placeholder=" {{objeto.consultaCliente.cnbyv}} " />
+ 	<span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+		CNBYV es dato requerido a 8 posiciones.
+	</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SUCURSAL SEG&nbsp;&nbsp;&nbsp;
+	<input name="sucSeg" type="text" ng-model="sucSeg" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" size="2" required  placeholder=" {{objeto.consultaCliente.suc_seg}} " />
+ 	<span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+		Sucursal SEG es dato requerido a 8 posiciones.
+	</span>
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;PROMOTOR&nbsp;&nbsp;&nbsp;
+<input name="promCve"type="text" size="5" ng-model="promotor"  placeholder=" {{objeto.consultaCliente.promotor_cve}} " />
+&nbsp;<input name="promNomb" type="text" ng-model="prom2" size="70"  placeholder=" {{objeto.consultaCliente.promotor_nomb}} " />
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;TELÉFONO&nbsp;&nbsp;&nbsp;
+<input name="tel1" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required  placeholder=" {{objeto.consultaCliente.tel1}} " />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	Teléfono es requerida a 8 posiciones.
+</span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXTENSIÓN&nbsp;&nbsp;&nbsp;
+	<input name="ext1" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" size="2"   placeholder=" {{objeto.consultaCliente.ext1}} " />
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+TELÉFONO&nbsp;&nbsp;&nbsp;
+<input name="tel2" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"  placeholder=" {{objeto.consultaCliente.tel2}} "  />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXTENSIÓN&nbsp;&nbsp;&nbsp;
+	<input name="ext2" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" size="2"  placeholder=" {{objeto.consultaCliente.ext2}} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EDO. CTA.&nbsp;&nbsp;&nbsp;<input name="edoCta" type="text" ng-model="foba" size="2"  placeholder=" {{objeto.consultaCliente.edoCta}} " />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;SUCURSAL COB&nbsp;&nbsp;&nbsp; <input name="sucCobro" type="text" ng-model="senicre" size="3"  placeholder=" {{objeto.consultaCliente.suc_Cob}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SECTOR SENICREB&nbsp;&nbsp;&nbsp; <input name="sectSenicreb" type="text" ng-model="senicre" size="3"  placeholder=" {{objeto.consultaCliente.sect_Senicreb}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SECTOR CONTRATOS&nbsp;&nbsp;&nbsp; <input name="sectContr" type="text" ng-model="senicre" size="6" placeholder=" {{objeto.consultaCliente.sect_Contratos}} "  />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+GRUPO CONTRATOS&nbsp;&nbsp;&nbsp; <input name="gpoContr" type="text" ng-model="senicre" size="2"  placeholder=" {{objeto.consultaCliente.gpo_Contratos}} " />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;FORMA PAGO&nbsp;&nbsp;&nbsp; <input name="formaPago" type="text" ng-model="senicre" size="1"  placeholder=" {{objeto.consultaCliente.forma_pago}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+DÍA COBRO&nbsp;&nbsp;&nbsp; <input name="diaCobro" type="text" ng-model="senicre" size="2"  placeholder=" {{objeto.consultaCliente.dia_cobro}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ACT SENICREB&nbsp;&nbsp;&nbsp; <input name="actSenicreb" type="text" ng-model="senicre" size="6"  placeholder=" {{objeto.consultaCliente.act_senicreb}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ACT BANXICO&nbsp;&nbsp;&nbsp; <input name="actBanxico" type="text" ng-model="senicre" size="8"  placeholder=" {{objeto.consultaCliente.act_banxico}} " />
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;LOCALIDAD&nbsp;&nbsp;&nbsp;
+<input name="localidad" type="text" ng-model="localidad" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"   placeholder=" {{objeto.consultaCliente.localidad}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+AUTORIZADO&nbsp;&nbsp;&nbsp;
+<input name="autorizado" type="text" ng-model="autorizado" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"   placeholder=" {{objeto.consultaCliente.autorizado}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+DISPUESTO&nbsp;&nbsp;&nbsp;
+<input name="dispuesto" type="text" ng-model="dispuesto" ng-maxlength="13"  size="20"  required  placeholder=" {{objeto.consultaCliente.dispuesto}} " /> 
+<span style="color: red;" ng-show = "index.rfc.$touched && index.rfc.$invalid">
+	Dispuesto es requerido a máximo 13 caracteres.
+</span>
+<input name="dispBIS" type="text" ng-model="homocve" size="1"  placeholder=" {{objeto.consultaCliente.dispuestoBIS}} " />
+
+
+
+
+ 
+<br/><br/>
+
+</div>
+
+</div>
+
+</form>
+
+
+
+
+
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="CLIENTES HIJO" name="btnF1" value=" ">CLIENTES HIJO</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F2" title="CLIENTES PADRE" name="btnF2" value=" ">CLIENTES PADRE</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F3" title="DIRECTO" name="btnF3" value=" ">DIRECTO</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F3" title="CUENTAS BANCARIAS" name="btnF3" value=" ">CUENTAS BANCARIAS</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F3" title="SALIR" name="btnF3" value=" ">SALIR</button>
+</div>
+
+
+</body>
+</html>

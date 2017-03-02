@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>MONITOR DE TESORERIA</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/monitorTesoreriaJS.js"></script>
+
+</head>
+
+<body>
+
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONITOR DE TESORERIA
+</div>	
+
+
+<form action="" name="MonitorTesoreria">
+
+
+
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+GRA REN REN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FIJA
+
+<br/><br/>
+
+<div ng-controller="myControllerMonitorTesoreria" align="left">
+
+	
+	
+	<table>	
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="1"  placeholder=" {{objeto.monitorTesoreria.celda_1A}} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_1B }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_1C }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="15" placeholder=" {{  objeto.monitorTesoreria.celda_1D }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_1E }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_1F }} " /></td>									
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="7" placeholder=" {{  objeto.monitorTesoreria.celda_1G }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_1H }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_1I }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_1J }} " /></td>
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra2" size="1" placeholder=" {{  objeto.monitorTesoreria.celda_2A }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA2" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_2B }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB2" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_3C }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB2" size="15" placeholder=" {{  objeto.monitorTesoreria.celda_3D }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model=fijaB2 size="30" placeholder=" {{  objeto.monitorTesoreria.celda_3E }} " /></td>	
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_3F }} " /></td>									
+			<td></td>			
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="7" placeholder=" {{  objeto.monitorTesoreria.celda_3G }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_3H }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_3I }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_3J }} " /></td>
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra3" size="1" placeholder=" {{  objeto.monitorTesoreria.celda_4A }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA3" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_4B }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB3" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_4C }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA3" size="15" placeholder=" {{  objeto.monitorTesoreria.celda_4D }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB3" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_4E }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_4F }} " /></td>									
+			<td></td>			
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="7" placeholder=" {{  objeto.monitorTesoreria.celda_4G }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_4H }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_4I }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_4J }} " /></td>
+		</tr>
+				
+				
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="1" placeholder=" {{  objeto.monitorTesoreria.celda_5A }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_5B }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_5C }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="15" placeholder=" {{  objeto.monitorTesoreria.celda_5D }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_5E }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_5F }} " /></td>									
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="7" placeholder=" {{  objeto.monitorTesoreria.celda_5G }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_5H }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_5I }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_5J }} " /></td>
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra2" size="1" placeholder=" {{  objeto.monitorTesoreria.celda_6A }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA2" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_6B }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB2" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_6C }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB2" size="15" placeholder=" {{  objeto.monitorTesoreria.celda_6D }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model=fijaB2 size="30" placeholder=" {{  objeto.monitorTesoreria.celda_6E }} " /></td>	
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_6F }} " /></td>									
+			<td></td>			
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="7" placeholder=" {{  objeto.monitorTesoreria.celda_6G }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_6H }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_6I }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_6J }} " /></td>
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra3" size="1" placeholder=" {{  objeto.monitorTesoreria.celda_7A }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA3" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_7B }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB3" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_7C }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA3" size="15" placeholder=" {{  objeto.monitorTesoreria.celda_7D }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB3" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_7E }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_7F }} " /></td>									
+			<td></td>			
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="7" placeholder=" {{  objeto.monitorTesoreria.celda_7G }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_7H }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_7I }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_7J }} " /></td>
+		</tr>
+		
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="1" placeholder=" {{  objeto.monitorTesoreria.celda_8A }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_8B }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_8C }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="15" placeholder=" {{  objeto.monitorTesoreria.celda_8D }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_8E }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_8F }} " /></td>									
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="7" placeholder=" {{  objeto.monitorTesoreria.celda_8G }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_8H }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_8I }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_8J }} " /></td>
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra2" size="1" placeholder=" {{  objeto.monitorTesoreria.celda_9A }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA2" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_9B }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB2" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_9C }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB2" size="15" placeholder=" {{  objeto.monitorTesoreria.celda_9D }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model=fijaB2 size="30" placeholder=" {{  objeto.monitorTesoreria.celda_9E }} " /></td>	
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_9F }} " /></td>									
+			<td></td>			
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="7" placeholder=" {{  objeto.monitorTesoreria.celda_9G }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_9H }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_9I }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_9J }} " /></td>
+		</tr>
+
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra3" size="1" placeholder=" {{  objeto.monitorTesoreria.celda_10A }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA3" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_10B }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB3" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_10C }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA3" size="15" placeholder=" {{  objeto.monitorTesoreria.celda_10D }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB3" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_10E }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_10F }} " /></td>									
+			<td></td>			
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="7" placeholder=" {{  objeto.monitorTesoreria.celda_10G }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_10H }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_10I }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_10J }} " /></td>
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra3" size="1" placeholder=" {{  objeto.monitorTesoreria.celda_11A }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA3" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_11B }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB3" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_11C }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA3" size="15" placeholder=" {{  objeto.monitorTesoreria.celda_11D }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB3" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_11E }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="30" placeholder=" {{  objeto.monitorTesoreria.celda_11F }} " /></td>									
+			<td></td>			
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="7" placeholder=" {{  objeto.monitorTesoreria.celda_11G }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_11H }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_11I }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="3" placeholder=" {{  objeto.monitorTesoreria.celda_11J }} " /></td>
+		</tr>						
+				
+				
+	</table>
+
+	
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TOTAL A COBRAR&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" ng-model="fijaA3" size="15"   placeholder=" {{  objeto.monitorTesoreria.total_cobrar }} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TOTAL COBRADO&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" ng-model="fijaA3" size="15"   placeholder=" {{  objeto.monitorTesoreria.total_cobrado }} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MONTO PENDIENTE&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" ng-model="fijaA3" size="15"   placeholder=" {{  objeto.monitorTesoreria.monto_pendiente }} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</div>
+
+</form>
+
+
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">REFRESCAR PANTALLA</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+		<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">MÁS DATOS</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+		<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">TRANSFERENCIA INDIVIDUAL</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+		<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">TRANSFERENCIA GLOBAL</button>
+</div>
+
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">CAMBIO DE ESTATUS</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+		<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">MOD. CUENTA</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+		<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">MOD. IMPORTE A DESCONTAR</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+		<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">SALIR</button>
+</div>
+
+</body>
+</html>

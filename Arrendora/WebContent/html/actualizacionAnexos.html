@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>ACTUALIZACION DE ANEXOS</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/actualizacionAnexosJS.js"></script>
+
+</head>
+
+<body>
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TESORERÍA
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTUALIZACIÓN DE ANEXOS
+</div>
+
+
+
+<form action="" name="ActualizacionAnexos">
+
+
+<div ng-controller=myControllerActAnexos align="left">
+
+<br/>
+<br/>
+
+
+
+
+&nbsp;&nbsp;&nbsp;No. CONTRATO&nbsp;&nbsp;
+<input name="numContr" type="text" size="20" ng-model="ctes"  placeholder=" {{objeto.actAnexos.num_contrato}} " />
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;CLIENTE&nbsp;&nbsp;&nbsp;
+<input name="cte" type="text" ng-model="greeting" size="50"  placeholder=" {{objeto.actAnexos.cliente}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="cveCte" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required  placeholder=" {{objeto.actAnexos.cve_cliente}} " />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	La clave numérica BUC es requerida a 8 posiciones.
+</span>
+
+
+
+
+<br/><br/>
+&nbsp;&nbsp;&nbsp;NO. DE ANEXO&nbsp;&nbsp;&nbsp;
+<input name="numAnex" type="text" ng-model="greeting"  placeholder=" {{objeto.actAnexos.num_anexo}} "  />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+REVISIÓN DE CONDICIONES&nbsp;&nbsp;&nbsp;
+<input name="revCond" type="text" ng-model="edoCte" size="5"  placeholder=" {{objeto.actAnexos.rev_condiciones}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;ARRENDADORA&nbsp;&nbsp;&nbsp;
+<input name="arrend" type="text" ng-model="edoCte" size="5"  placeholder=" {{objeto.actAnexos.cve_arrendadora}} " />
+<input name="cveArren" type="text"  size="100" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required  placeholder=" {{objeto.actAnexos.arrendadora}} " />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	MONTO es requerido a 8 posiciones.
+</span>
+
+<br/><br/>
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;FECHA INICIO&nbsp;&nbsp;&nbsp;
+<input name="fecIni" type=date id=dt  placeholder=" {{objeto.actAnexos.fecha_ini}} " >
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA VENCIMIENTO&nbsp;&nbsp;&nbsp;
+<input name="fecVen" type=date id=dt  placeholder=" {{objeto.actAnexos.fecha_ven}} " >
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+TASA&nbsp;&nbsp;
+<input name="tasa1" type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.actAnexos.tasa_1}} "  />
+<input name="tasa2" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.actAnexos.tasa_2}} " />
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;PAGARÉ&nbsp;&nbsp;
+<input name="pagare" type="text" size="7" ng-model="ctes"  placeholder=" {{objeto.actAnexos.pagare}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ESTADO&nbsp;&nbsp;
+<input name="estado" type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.actAnexos.estado}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+RESPONSIVA&nbsp;&nbsp;
+<input name="responsiva" type="text" size="7" ng-model="ctes"  placeholder=" {{objeto.actAnexos.responsiva}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. COTIZACIÓN&nbsp;&nbsp;
+<input name="numCotiz" type="text" size="7" ng-model="ctes"  placeholder=" {{objeto.actAnexos.num_cotizacion}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;% VENTA A TERCEROS&nbsp;&nbsp;
+<input name="vtaTerc" type="text" size="7" ng-model="ctes"  placeholder=" {{objeto.actAnexos.venta_terceros}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+% INTERÉS MORATORIO&nbsp;&nbsp;
+<input name="intMorat" type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.actAnexos.interes_moratorio}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FACTOR MORATORIO&nbsp;&nbsp;
+<input name="factMorat" type="text" size="7" ng-model="ctes"  placeholder=" {{objeto.actAnexos.factor_moratorio}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<br/>
+<br/>
+
+<br/>
+<br/>
+
+</div>
+
+</form>
+
+
+
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Módulo Representantes y Avales" name="btnF1" value=" ">UBICACIÓN Y DESTINO DE LOS BIENES</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F2" title="Módulo Accionistas" name="btnF2" value=" ">GARANTÍAS DEL ANEXO</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F3" title="Módulo Cuenta Cheques" name="btnF3" value=" ">OBLIGACIONES DE HACER Y NO HACER</button>	
+</div>
+
+
+
+</body>
+</html>

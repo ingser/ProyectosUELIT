@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>DESCRIPCIÓN DE LÍNEA</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/descripcionLineaJS.js"></script>
+
+</head>
+
+<body>
+
+<form action="" name="DescripLinea">
+
+
+<div ng-controller="myControllerDescripLinea" align="left">
+
+<br/>
+<br/>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. DE LÍNEA&nbsp;&nbsp;&nbsp;
+<input name="numLineaa" type="text" ng-model="loc"  size="10"   placeholder=" {{objeto.descripLinea.num_linea_A}} "  />
+<input name="numLineaB" type="text" ng-model="loc"  size="60"   placeholder=" {{objeto.descripLinea.num_linea_B}} " />
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. DE COND.&nbsp;&nbsp;&nbsp;
+<input name="numCondA" type="text" ng-model="loc"  size="10"   placeholder=" {{objeto.descripLinea.num_cond_A}} "  />
+<input name="numCondB" type="text" ng-model="loc"  size="60"   placeholder=" {{objeto.descripLinea.num_cond_B}} " />
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ATENCIÓN DE&nbsp;&nbsp;&nbsp;
+<input name="atenA" type="text" ng-model="loc"  size="10"    placeholder=" {{objeto.descripLinea.atencion_de_A}} " />
+<input name="atenB" type="text" ng-model="loc"  size="60"   placeholder=" {{objeto.descripLinea.atencion_de_B}} " />
+
+
+
+</div>
+
+</form>
+
+
+
+</body>
+</html>

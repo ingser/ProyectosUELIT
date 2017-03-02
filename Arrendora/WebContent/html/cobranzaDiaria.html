@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>COBRANZA DIARIA</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/cobranzaDiariaJS.js"></script>
+
+</head>
+
+<body>
+	
+		
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+
+</div>	
+	
+
+<form action="" name="CobranzaDiaria">
+
+
+<div ng-controller="myControllerCobranzaDiaria" align="left">
+
+<br/>
+<br/>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COBRANZA DIARIA (INGRESOS POR ARRENDAMIENTO)
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	No.	TRANSACCIÓN&nbsp;&nbsp;
+	<input name="num_tran" type="text" size="20" ng-model="ctes"  placeholder=" {{objeto.cobranzaDiaria.num_transacc}} " />
+
+
+	<br />
+	<br /> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	FECHA CAPTURA&nbsp;&nbsp;&nbsp;
+	<input name="fecCap" type=date id=dt  placeholder=" {{objeto.cobranzaDiaria.fecha_captura}} " >
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AFECTAR SALDO&nbsp;&nbsp;&nbsp;
+	<input name="afecSal" type=date id=dt  placeholder=" {{objeto.cobranzaDiaria.afectar_saldo}} " >
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FECHA VALOR&nbsp;&nbsp;&nbsp;
+	<input name="fecVal" type=date id=dt  placeholder=" {{objeto.cobranzaDiaria.fecha_valor}} " >
+
+
+
+	<br />
+	<br />
+
+
+		
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		CLIENTE
+			<input name="cteA" type="text" ng-model="edoCte" size="3"  placeholder=" {{objeto.cobranzaDiaria.cliente_A}} "  /> 
+			<input name="cteB" type="text" ng-model="greeting" size="7"   placeholder=" {{objeto.cobranzaDiaria.cliente_B}} " />  
+			<input name="cteC"  type="text" size="60"  ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/"
+				ng-minlength="8" ng-maxlength="8" required  placeholder=" {{objeto.cobranzaDiaria.cliente_C}} " /> 
+				<span
+				style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> La clave
+				numérica BUC es requerida a 8 posiciones. </span> 
+				
+				<br /> <br /> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			
+	FORMA DE PAGO&nbsp;&nbsp;
+	<input  name="forPagA" type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.cobranzaDiaria.forma_Pago_A}} " />
+	<input name="forPagoB" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.cobranzaDiaria.forma_Pago_B}} " />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	CUENTA&nbsp;&nbsp;
+	<input name="cuentaA" type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.cobranzaDiaria.cuenta_A}} " /> 
+	<input name="cuentaB" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.cobranzaDiaria.cuenta_B}} " /> 
+	
+	<br /> <br />
+				
+				
+				
+				<br /> <br /> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			
+	FORMA DE COBRO&nbsp;&nbsp;&nbsp;
+	<input name="forCobro" type="text" ng-model="edoCte" size="5"  placeholder=" {{objeto.cobranzaDiaria.forma_cobro}} " /> 
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				MONTO
+				<input name="monto" type="text" size="30" ng-model="cvebuc"
+				ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.cobranzaDiaria.monto}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>				
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				MONEDA&nbsp;&nbsp;&nbsp;
+				<input name="cveMon" size="3" type="text" ng-model="greeting"  placeholder=" {{objeto.cobranzaDiaria.cve_moneda}} " />
+				<input name="moneda" type="text" ng-model="edoCte" size="30"  placeholder=" {{objeto.cobranzaDiaria.moneda}} "  />
+				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<br /> <br /> 
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		
+	MONEDA NACIONAL VIGENTE&nbsp;&nbsp;&nbsp;
+				<input name="monNalVig" type="text" size="30" ng-model="cvebuc"
+				ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.cobranzaDiaria.moneda_nal_vigente}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>				
+			
+			
+			<br /> <br /> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		
+			CLAVE BANCO&nbsp;&nbsp;
+				<input name="cveBco" type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.cobranzaDiaria.cve_banco}} " />
+				<input name="banco" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.cobranzaDiaria.banco}} " /> 
+				&nbsp;&nbsp;
+				&nbsp;&nbsp;
+				&nbsp;&nbsp;
+			SUCURSAL&nbsp;&nbsp;
+			<input name="sucursal" type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.cobranzaDiaria.sucursal}} " /> 
+
+
+			<br /> <br /> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+			PLAZA&nbsp;&nbsp;
+			<input name="plaza" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.cobranzaDiaria.plaza}} " /> 
+				&nbsp;&nbsp;
+				&nbsp;&nbsp;
+				&nbsp;&nbsp;
+			
+			NÚMERO DE CHEQUE&nbsp;&nbsp; 
+			<input name="numCheq" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.cobranzaDiaria.num_cheque}} " /> 
+				&nbsp;&nbsp;
+				&nbsp;&nbsp;
+				&nbsp;&nbsp;
+			
+			TIPO DE CHEQUE&nbsp;&nbsp;
+			<input name="tipoCheq" type="text" size="3" ng-model="ctes"  placeholder=" {{objeto.cobranzaDiaria.tipo_cheque}} " /> 
+				&nbsp;&nbsp;
+				&nbsp;&nbsp;
+				&nbsp;&nbsp;
+				
+																
+				<br /> <br />
+			
+			<br /> <br /> 
+			
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+			No. DE CUENTA&nbsp;&nbsp;&nbsp;
+			 <input	name="numCtaA" type="text" size="30" ng-model="cvebuc"
+				ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.cobranzaDiaria.cuenta_A}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>
+				<input name="numCtaB" type="text" size="3" ng-model="ctes"  placeholder=" {{objeto.cobranzaDiaria.cuenta_B}} " />
+				
+				 <br /> <br /> <br /> <br /> 
+	</div>
+
+	</form>
+
+
+	<br />
+	<div align="center">
+		<button type="button" id="F1" title="Módulo Representantes y Avales"
+			name="btnF1" value=" ">CONSULTA COBRANZA POR DÍA</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" id="F2" title="Módulo Accionistas" name="btnF2"
+			value=" ">INGRESOS POR RECONOCER</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" id="F3" title="Módulo Cuenta Cheques"
+			name="btnF3" value=" ">COMISIONES</button>
+	</div>
+
+
+
+</body>
+</html>

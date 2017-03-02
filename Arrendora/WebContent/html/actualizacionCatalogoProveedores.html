@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>ACTUALIZACIÓN CATÁLOGO DE PROVEEDORES</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/actualizacionCatalogoProveedoresJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+
+</script>
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTUALIZACIÓN CATÁLOGO DE PROVEEDORES 
+
+</div>	
+
+
+
+
+<div ng-controller="myControllerActCatProveed" align="left">
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE&nbsp;&nbsp;&nbsp;
+<input name="clave" type="text" ng-model="loc"  size="10"   placeholder=" {{objeto.actCatProveed.clave}} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NOMBRE&nbsp;&nbsp;&nbsp;
+<input name="nombre" type="text" ng-model="loc"  size="50"   placeholder=" {{objeto.actCatProveed.nombre}} " />
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ATENCIÓN&nbsp;&nbsp;&nbsp;
+<input name="atencion" type="text" ng-model="greeting" size="40"  placeholder=" {{objeto.actCatProveed.atencion}} " />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+R.F.C.&nbsp;&nbsp;&nbsp;
+<input name="rfc" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.actCatProveed.rfc}} " />
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CALLE&nbsp;&nbsp;&nbsp;
+<input name="calle" type="text" ng-model="greeting" size="70"  placeholder=" {{objeto.actCatProveed.calle}} " />
+
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. EXT.&nbsp;&nbsp;&nbsp;
+<input name="numExt" type="text" ng-model="loc"  size="10"   placeholder=" {{objeto.actCatProveed.num_ext}} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. INT.&nbsp;&nbsp;&nbsp;
+<input name="numInt" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.actCatProveed.num_int}} " />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+COLONIA&nbsp;&nbsp;&nbsp;
+<input name="col" type="text" ng-model="loc"  size="40"   placeholder=" {{objeto.actCatProveed.colonia}} " />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+C.P.&nbsp;&nbsp;&nbsp;
+<input name="cp" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.actCatProveed.cp}} "  />
+
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ENTIDAD&nbsp;&nbsp;&nbsp;
+<input name="cve_ent" type="text" ng-model="loc"  size="10"   placeholder=" {{objeto.actCatProveed.cve_entidad}} " />
+<input name="entidad" type="text" ng-model="loc"  size="40"   placeholder=" {{objeto.actCatProveed.entidad}} " />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CIUDAD&nbsp;&nbsp;&nbsp;
+<input name="ciudad" type="text" ng-model="loc"  size="60"   placeholder=" {{objeto.actCatProveed.ciudad}} " />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TELÉFONO 1:&nbsp;&nbsp;&nbsp;
+<input name="tel1" type="text" ng-model="loc"  size="10"   placeholder=" {{objeto.actCatProveed.tel1}} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXT. 1&nbsp;&nbsp;&nbsp;
+<input name="ext1" type="text" ng-model="loc"  size="2"   placeholder=" {{objeto.actCatProveed.ext1}} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TELÉFONO 2&nbsp;&nbsp;&nbsp;
+<input name="tel2" type="text" ng-model="loc"  size="10"   placeholder=" {{objeto.actCatProveed.tel2}} " />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXT. 2&nbsp;&nbsp;&nbsp;
+<input name="ext2" type="text" ng-model="loc"  size="2"   placeholder=" {{objeto.actCatProveed.ext2}} " />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FAX:&nbsp;&nbsp;&nbsp;
+<input name="fax" type="text" ng-model="loc"  size="10"   placeholder=" {{objeto.actCatProveed.fax}} " />
+
+
+
+</div>
+
+
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">ACTUALIZAR</button>
+</div>
+
+
+
+
+</body>
+</html>

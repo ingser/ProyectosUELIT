@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>MANTENIMIENTO A LA CARTERA</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/manttoCarteraJS.js"></script>
+
+</head>
+
+<body>
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MANTENIMIENTO A LA CARTERA
+
+<br/>
+<br/>
+</div>	
+	
+<form action="" name="ManttoCartera">
+
+
+<div align="center">
+
+<br/>
+<br/>
+	
+	<h2><label>DATOS GENERALES</label></h2>
+	
+</div>
+	
+<div  ng-controller="myControllerManttoCartera" align="center">
+
+	<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+CLIENTE&nbsp;&nbsp;
+<input type="text"	size="5" ng-model="ctes"  placeholder=" {{objeto.manttoCartera.cve_cliente}} " />
+<input type="text"	size="50" ng-model="ctes"  placeholder=" {{objeto.manttoCartera.cliente}} " />
+				 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 
+EMPRESA&nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.cve_empresa}} " />
+<input type="text" ng-model="greeting" size="20"  placeholder=" {{objeto.manttoCartera.empresa}} " />				
+				 
+<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				 
+CONTRATO&nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.contrato}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+ANEXO &nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.anexo}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+COTIZACIÓN &nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.cotizacion}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+DISPOSICIÓN &nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.disposicion}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+PLAZO &nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.plazo}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;					
+<br />
+<br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+ARRENDAMIENTO&nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="3"  placeholder=" {{objeto.manttoCartera.cve_arrendamiento}} " />
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.arrendamiento}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+MONEDA &nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="3"  placeholder=" {{objeto.manttoCartera.cve_moneda}} " />
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.moneda}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+IVA &nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.iva}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+FACTOR DE IVA &nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.factor_iva}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<br />
+<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA DE PAGO&nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.fecha_pago}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+ESTATUS &nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="2"  placeholder=" {{objeto.manttoCartera.cve_estatus}} " />
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.status}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+OPCIÓN COMPRA &nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.opcion_compra}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+CAR. VEN. &nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="2"  placeholder=" {{objeto.manttoCartera.cve_cart_vencida}} " />
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.manttoCartera.cart_vencida}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<br />
+<br />
+
+
+
+	
+	</div>
+</form>
+
+	<br />
+	<div align="center">
+		<button type="button" id="F1" title=""
+			name="btnF1" value=" ">SUBCOTIZACIONES</button>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" id="F1" title=""
+			name="btnF1" value=" ">PARA ACTUALIZAR</button>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>DOMICILIO ADMINISTRATIVO DEL CLIENTE</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/domicilioAdministrativoClienteJS.js"></script>
+
+</head>
+
+<body>
+
+<form action="">
+
+
+<div ng-controller="myControllerDomAdmCliente" align="left">
+
+<br/>
+<br/>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CALLE&nbsp;&nbsp;&nbsp;
+<input name="calle" type="text" ng-model="greeting" size="60"  placeholder=" {{objeto.domAdmCliente.calle}} " />
+
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NO. EXT.&nbsp;&nbsp;&nbsp;
+<input name="numExt" type="text" ng-model="edoCte" size="10"  placeholder=" {{objeto.domAdmCliente.num_ext}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NO. INT.&nbsp;&nbsp;&nbsp;
+<input name=numInt type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.domAdmCliente.num_int}} "  />
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+COLONIA&nbsp;&nbsp;&nbsp;
+<input name="col" type="text" ng-model="greeting" size="40"  placeholder=" {{objeto.domAdmCliente.colonia}} " />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+C.P.&nbsp;&nbsp;&nbsp;
+<input name="cp" type="text" ng-model="loc"  size="10"   placeholder=" {{objeto.domAdmCliente.cp}} " />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ENTIDAD&nbsp;&nbsp;&nbsp;
+<input name="cveEnt" type="text" ng-model="loc"  size="10"   placeholder=" {{objeto.domAdmCliente.cve_entidad}} " />
+<input name="ent" type="text" ng-model="loc"  size="70"  placeholder=" {{objeto.domAdmCliente.entidad}} "  />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CIUDAD&nbsp;&nbsp;&nbsp;
+<input name="cd" type="text" ng-model="loc"  size="70"  placeholder=" {{objeto.domAdmCliente.ciudad}} "  />
+
+<br/>
+
+
+</div>
+
+</form>
+
+<br/>
+<br/>
+
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">COPIAR LA DIRECCIÓN</button>
+</div>
+
+
+</body>
+</html>

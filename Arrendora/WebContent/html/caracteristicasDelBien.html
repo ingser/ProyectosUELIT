@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>CARACTERÍSTICAS DEL BIEN</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/caracteristicasDelBienJS.js"></script>
+
+</head>
+
+<body>
+
+<form action="" name="caractBien">
+
+
+<div ng-controller="myControllerCaractBien" align="left">
+
+<br/>
+<br/>
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. DE BIEN&nbsp;&nbsp;&nbsp;
+<input name="numBien" type="text" ng-model="loc"  size="10"   placeholder=" {{objeto.caractBien.num_bien}} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TIPO DE BIEN&nbsp;&nbsp;&nbsp;
+<input name="cveTipBien" type="text" ng-model="loc"  size="5"    placeholder=" {{objeto.caractBien.cve_tipo_bien}} "  />
+<input name="tipoBien" type="text" ng-model="loc"  size="40"   placeholder=" {{objeto.caractBien.tipo_bien}} "   />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MARCA&nbsp;&nbsp;&nbsp;
+<input name="cveMarca" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.caractBien.cve_marca}} " />
+<input name="marca" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.caractBien.marca}} "  />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MODELO&nbsp;&nbsp;&nbsp;
+<input name="modelo" type="text" ng-model="loc"  size="30"  placeholder=" {{objeto.caractBien.modelo}} "  />
+
+
+
+<br/>
+<br/>
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SERIE&nbsp;&nbsp;&nbsp;
+<input name="serie" type="text" ng-model="loc"  size="40"   placeholder=" {{objeto.caractBien.serie}} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MOTOR&nbsp;&nbsp;&nbsp;
+<input name="motor" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.caractBien.motor}} "  />
+
+
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+COLOR&nbsp;&nbsp;&nbsp;
+<input name="color" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.caractBien.color}} " />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NUM. COTIZACIÓN&nbsp;&nbsp;&nbsp;
+<input name="numCotiz" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.caractBien.num_cotizacion}} "  />
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PLACAS&nbsp;&nbsp;&nbsp;
+<input name="placas" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.caractBien.placas}} " />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+DÍA DE DESCANSO&nbsp;&nbsp;&nbsp;
+<input name="cve_Desc" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.caractBien.cve_dia_descanso}} " />
+<input name="diaDesc" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.caractBien.dia_descanso}} " />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TRÁMITES:&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PLACAS&nbsp;&nbsp;&nbsp;
+<input name="placas2" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.caractBien.placas2}} " />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TENENCIA&nbsp;&nbsp;&nbsp;
+<input name="tenencia" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.caractBien.tenencia}} " />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SEGURO&nbsp;&nbsp;&nbsp;
+<input name="seg" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.caractBien.seguro}} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+REGISTRO&nbsp;&nbsp;&nbsp;
+<input name="cveReg" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.caractBien.cve_registro}} " />
+<input name="registro" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.caractBien.registro}} " />
+
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MONTO DE FACTURA&nbsp;&nbsp;&nbsp;
+<input name="monFact" type="text" ng-model="loc"  size="15"  placeholder=" {{objeto.caractBien.monto_fact}} "  />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+IVA&nbsp;&nbsp;&nbsp;
+<input name="iva" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.caractBien.iva}} "  />
+
+
+</div>
+
+</form>
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">CARACTERÍSTICAS ESPECÍFICAS</button>
+</div>
+
+
+
+
+</body>
+</html>

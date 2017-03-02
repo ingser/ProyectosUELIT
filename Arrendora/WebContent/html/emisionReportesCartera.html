@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>EMISIÓN DE REPORTES DE CARTERA</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/emisionReportesCarteraJS.js"></script>
+
+</head>
+
+<body>
+
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EMISIÓN DE REPORTES DE CARTERA
+
+</div>	
+
+<form action="">
+
+
+<div ng-controller="myController" align="center">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerEmisionRepCartera">
+
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1.- REPORTE MENSUAL DE VENCIMIENTOS POR CLIENTE
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.- REPORTE MENSUAL DE VENCIMIENTOS POR EMPRESA
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3.- REPORTE MENSUAL DE VENCIMIENTOS GLOBAL
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4.- REPORTE MENSUAL DE VENCIMIENTOS EN JURÍDICO
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5.- REPORTE DE CARTERA VENCIDA POR CLIENTE
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6.- REPORTE DE CARTERA VENCIDA POR EMPRESA
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+7.- REPORTE DE CARTERA VENCIDA GLOBAL
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+8.- REPORTE DE APLICACIÓN DE COBRANZA
+
+<br/>
+<br/>
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+OPCIÓN&nbsp;&nbsp;&nbsp;
+<input type="text" ng-model="edoCte" size="5" value=""/>
+
+<br/>
+<br/>
+
+</div>
+
+</div>
+
+</form>
+
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="TOOL TIP" name="btnF1" value=" ">ACEPTAR</button>
+</div>
+
+
+</body>
+</html>

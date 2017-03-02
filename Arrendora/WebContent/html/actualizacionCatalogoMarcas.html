@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>ACTUALIZACIÓN CATÁLOGO DE MARCAS</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/actualizacionCatalogoMarcasJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+var fecha = day + "/" + month + "/" + year;
+
+</script>
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTUALIZACIÓN DE CATÁLOGO DE MARCAS
+
+</div>	
+
+<form action="">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerActCatalMarcas">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE&nbsp;&nbsp;&nbsp;
+<input name="cve" type="text" ng-model="edoCte" size="5" placeholder=" {{ objeto.actCatalMarcas.clave}}"/>
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+DESCRIPCIÓN&nbsp;&nbsp;&nbsp;
+<input name="descr" type="text" ng-model="edoCte" size="70" placeholder=" {{ objeto.actCatalMarcas.descripcion}}"/>
+
+<br/>
+<br/>
+
+</div>
+
+</div>
+
+</form>
+
+
+
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="TOOL TIP" name="btnF1" value=" ">ACTUALIZAR</button>
+</div>
+
+
+</body>
+</html>

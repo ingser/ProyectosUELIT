@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>DIRECTORIO</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/directorioJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+
+</script>
+
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Find&nbsp;&nbsp;&nbsp;
+<input name="find" type="text" ng-model="loc"  size="60" placeholder="1%"  />
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CONSECUTIVO
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NOMBRE
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<textarea rows="10" cols="70">
+ 
+</textarea>
+
+</div>
+
+
+<br/>
+<br/>
+
+<div align="left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">FIND</button>
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">OK</button>
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">CANCEL</button>
+</div>
+
+
+</body>
+</html>

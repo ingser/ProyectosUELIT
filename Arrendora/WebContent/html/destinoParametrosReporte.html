@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>DSTINO Y PARÁMETROS DEL REPORTE</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/destinoParametrosReporteJS.js"></script>
+
+</head>
+
+<body>
+
+
+
+<br/>
+<br/>
+
+
+<br/>
+<br/>
+
+<label>DESTINO Y PARÁMETROS DEL REPORTE</label>
+
+<form action="" name="ParamReporte">
+
+
+<div ng-controller="myControllerParamReporte" align="center">
+
+<br/>
+<br/>
+	
+	<table>	
+	
+		<tr>
+			<td>DESTINO</td>
+			<td>
+				<input name="cveDest" type="text" ng-model="gra1" size="3"  placeholder=" {{objeto.paramReporte.cve_destino}} "  />
+				<input name="destino" type="text" ng-model="gra1" size="30"  placeholder=" {{objeto.paramReporte.destino}} "  />
+			</td>
+		</tr>	
+
+		<tr>
+			<td>EMPRESA</td>
+			<td>
+				<input name="cveEmp" type="text" ng-model="gra1" size="3"  placeholder=" {{objeto.paramReporte.cve_empresa}} "  />
+				<input name="empresa" type="text" ng-model="gra1" size="30"  placeholder=" {{objeto.paramReporte.empresa}} "  />
+			</td>
+		</tr>	
+		
+		<tr>
+			<td>SUCURSAL</td>
+			<td>
+				<input name="cveSuc" type="text" ng-model="gra1" size="3"  placeholder=" {{objeto.paramReporte.cve_sucursal}} "  />
+				<input name="sucursal" type="text" ng-model="gra1" size="30"  placeholder=" {{objeto.paramReporte.sucursal}} "  />
+			</td>
+		</tr>
+		
+		<tr>
+			<td>FECHA DE PROYECCIÓN</td>
+			<td>
+				<input name="fecProy" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.paramReporte.fecha_proyeccion}} "  />
+			</td>
+		</tr>	
+						
+	</table>
+	
+	
+	
+	
+	
+</div>
+
+
+
+</form>
+
+
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">ACEPTAR</button>
+</div>
+
+
+</body>
+</html>

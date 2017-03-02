@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>REPORTE DE APLICACIÓN DE LA COBRANZA</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/repAplicCobranzaJS.js"></script>
+
+</head>
+
+<body>
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REPORTE DE APLICACIÓN DE LA COBRANZA
+
+</div>	
+
+<br/>
+<br/>
+
+
+<form action="" name="RepAplicCobr">
+
+
+<div ng-controller="myControllerRepAplicCobran" align="left">
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA DEL REPORTE&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" ng-model="fijaA3" size="15"   placeholder=" {{objeto.repAplicCobran.fecha_reporte}} " />
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SUCURSAL&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" ng-model="fijaA3" size="3"  placeholder=" {{objeto.repAplicCobran.cve_sucursal}} "  />
+<input type="text" ng-model="fijaA3" size="50"   placeholder=" {{objeto.repAplicCobran.sucursal}} " />
+
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+COMENTARIOS
+
+<br/>
+	
+	<table>	
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="100"  placeholder=" {{objeto.repAplicCobran.comentarios_1}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra2" size="100"  placeholder=" {{objeto.repAplicCobran.comentarios_2}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra3" size="100"  placeholder=" {{objeto.repAplicCobran.comentarios_3}} "  /></td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="100"  placeholder=" {{objeto.repAplicCobran.comentarios_4}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra2" size="100"  placeholder=" {{objeto.repAplicCobran.comentarios_5}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra3" size="100"  placeholder=" {{objeto.repAplicCobran.comentarios_6}} "  /></td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="100"  placeholder=" {{objeto.repAplicCobran.comentarios_7}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra2" size="100"  placeholder=" {{objeto.repAplicCobran.comentarios_8}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra3" size="100"  placeholder=" {{objeto.repAplicCobran.comentarios_9}} "  /></td>
+		</tr>				
+				
+	</table>
+	
+</div>
+
+
+</form>
+
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">IMPRIMIR REPORTE</button>
+</div>
+
+
+</body>
+</html>

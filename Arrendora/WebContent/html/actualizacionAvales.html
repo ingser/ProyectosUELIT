@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>ACTUALIZACIÓN DE AVALES</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/actualizacionAvalesJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+	var date = new Date();
+	var d  = date.getDate();
+	var day = (d < 10) ? '0' + d : d;
+	var m = date.getMonth() + 1;
+	var month = (m < 10) ? '0' + m : m;
+	var yy = date.getYear();
+	var year = (yy < 1000) ? yy + 1900 : yy;
+	var fecha = day + "/" + month + "/" + year;
+</script>
+
+<form action="">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerAval">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. DE AVAL&nbsp;&nbsp;&nbsp;
+<input id="numAv" name="num_aval" type="text" ng-model="loc"  size="10" placeholder=" {{objeto.aval.num_aval}} "  />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TIPO DE AVAL&nbsp;&nbsp;&nbsp;
+<input id="tipoAv" name="tipoAval" type="text" ng-model="loc"  size="10" placeholder=" {{objeto.aval.tipo_aval}} " />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FACULTADES:&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+AVAL&nbsp;&nbsp;&nbsp;
+<input id="aval" name="aval" type="text" ng-model="loc"  size="2" placeholder=" {{objeto.aval.aval}} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+OBLIGADO SOLIDARIO&nbsp;&nbsp;&nbsp;
+<input id="obli"  name="obligado" type="text" ng-model="loc"  size="2" placeholder=" {{objeto.aval.obligado}} " />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+OTORGA CUALQUIER GARANTÍA&nbsp;&nbsp;&nbsp;
+<input id="garan" name="garantia" type="text" ng-model="loc"  size="2" placeholder=" {{objeto.aval.otorga_garantia}} " />
+
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NOMBRE&nbsp;&nbsp;&nbsp;
+<input id="nom" name="nombre" type="text" ng-model="greeting" size="70" placeholder=" {{objeto.aval.nombre}} " />
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+R.F.C.&nbsp;&nbsp;&nbsp;
+<input id="rfc" name="rfc" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.aval.rfc}} " />
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CALLE&nbsp;&nbsp;&nbsp;
+<input id="calle" name="calle" type="text" ng-model="greeting" size="70"  placeholder=" {{objeto.aval.calle}} " />
+
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. EXT.&nbsp;&nbsp;&nbsp;
+<input id="ext" name="numExt" type="text" ng-model="loc"  size="10" placeholder=" {{objeto.aval.num_ext}} "  />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. INT.&nbsp;&nbsp;&nbsp;
+<input id="int" name="numInt" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.aval.num_int}} " />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+COLONIA&nbsp;&nbsp;&nbsp;
+<input id="col" name="colonia" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.aval.colonia}} "  />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+C.P.&nbsp;&nbsp;&nbsp;
+<input id="cp" name="cp" type="text" ng-model="loc"  size="10" placeholder=" {{objeto.aval.cp}} "  />
+
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ENTIDAD&nbsp;&nbsp;&nbsp;
+<input id="cveEnt" name="cve_entidad" type="text" ng-model="loc"  size="10" placeholder=" {{objeto.aval.cve_entidad}} " />
+<input id="ent" name="entidad" type="text" ng-model="loc"  size="40" placeholder=" {{objeto.aval.entidad}} " />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CIUDAD&nbsp;&nbsp;&nbsp;
+<input id="cd" name="ciudad" type="text" ng-model="loc"  size="60" placeholder=" {{objeto.aval.ciudad}} " />
+
+
+</div>
+
+</div>
+
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">COPIAR TODOS LOS AVALES A OTRO CLIENTE</button>
+</div>
+
+</form>
+
+
+</body>
+</html>

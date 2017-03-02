@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+	<head>
+	<meta charset="ISO-8859-1">
+	<title>PAGE_13</title>
+	<link rel="stylesheet" href="../css/apl_1.css"/>
+	<script src="../lib/angular.js"></script>
+	<script src="../js/reportesGenericoJS.js"></script>
+</head>
+
+<body>
+
+<form action="">
+
+
+<div ng-controller="ControllerReporteGenerico">
+
+<br/>
+<br/>
+
+
+<div align="center">
+<!-- 	COTIZACIÓN DE ARRENDAMIENTO -->
+	<label> {{ objeto.repGenerico.titulo_reporte}} </label>
+</div>
+
+<br/>
+<div align="right">
+	CIUDAD DE MÉXICO, {{ objeto.repGenerico.fechaCompleta}}
+	<br/>
+	PÁGINA:   {{ objeto.repGenerico.pag_ini}} DE {{ objeto.repGenerico.pag_fin}}
+	<br/>
+	{{ objeto.repGenerico.consec_reporte}}
+</div>
+
+
+<br/>
+<div>
+	<table>
+		<tr>
+			<td>
+				COTIZACIÓN:
+			</td>
+			<td>
+				{{ objeto.repGenerico.cotizacion}}
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				CLAVE CLIENTE:
+			</td>
+			<td>
+				{{ objeto.repGenerico.cve_cliente}}
+			</td>				
+		</tr>
+
+		<tr>
+			<td>
+				CLIENTE:
+			</td>
+			<td>
+				{{ objeto.repGenerico.cliente}}
+			</td>		
+		</tr>
+
+		<tr>
+			<td>
+				ATENCIÓN:
+			</td>
+			<td>
+				{{ objeto.repGenerico.atencion}}
+			</td>	
+		</tr>
+	
+	</table>
+</div>
+
+<br/>
+<br/>
+
+<div align="center">
+	<table>
+		<tr>
+			<td>
+				TIPO DE ARRENDAMIENTO:
+			</td>
+			<td>
+				{{ objeto.repGenerico.tipo_arendamiento}}
+			</td>
+			<td>
+			</td>			
+		</tr>
+
+		<tr>
+			<td>
+				TIPO DE BIEN:
+			</td>
+			<td>
+				{{ objeto.repGenerico.tipo_bien}}
+			</td>
+			<td>
+				LEASEBACK
+			</td>							
+		</tr>
+
+		<tr>
+			<td>
+				TIPO DE MONEDA:
+			</td>
+			<td>
+				{{ objeto.repGenerico.tipo_moneda}}
+			</td>
+			<td>
+			</td>					
+		</tr>
+
+		<tr>
+			<td>
+				MONTO DEL BIEN:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.monto_bien}}
+			</td>
+			<td>
+				
+			</td>				
+		</tr>
+		
+
+		<tr>
+			<td>
+				IVA:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.iva}}
+			</td>
+			<td>
+				
+			</td>				
+		</tr>
+		
+
+		<tr>
+			<td>
+				OPCIÓN DE COMPRA:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.opcion_compra}}
+			</td>
+			<td>
+				MÁS IVA
+			</td>
+		</tr>				
+	
+	</table>
+</div>
+
+
+<br/>
+
+<div align="center">
+	<table>
+		<tr>
+			<td>
+				TIPO DE MONEDA:
+			</td>
+			<td>
+				{{ objeto.repGenerico.tipo_de_moneda}}
+			</td>			
+		</tr>
+
+		<tr>
+			<td>
+				MONTO A FINANCIAR:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.monto_financiar}}
+			</td>						
+		</tr>
+
+		<tr>
+			<td>
+				COMISIÓN APERTURA:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.comision_apertura}}
+			</td>					
+		</tr>
+
+		<tr>
+			<td>
+				MONTO EN DEPÓSITO:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.monto_en_deposito}}
+			</td>				
+		</tr>
+		
+
+		<tr>
+			<td>
+				SEGURO:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.seguro}}
+			</td>	
+		</tr>
+		
+
+		<tr>
+			<td>
+				MONTO DEL BIEN:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.monto_bien_2}}
+			</td>
+		</tr>				
+	
+	</table>
+</div>
+
+
+<br/>
+
+<div align="center">
+<table>
+		<tr>
+			<td>
+				CAPITAL:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.capital}}
+			</td>				
+		</tr>
+		
+
+		<tr>
+			<td>
+				INTERESES:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.intereses}}
+			</td>	
+		</tr>
+		
+
+		<tr>
+			<td>
+				IVA:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.iva_intereses}}
+			</td>
+		</tr>				
+	
+	</table>
+</div>
+
+
+<br/>
+
+
+<div align="center">
+	<table>
+		<tr>
+			<td>
+				TABLA:
+			</td>
+			<td>
+				{{ objeto.repGenerico.tabla}}
+			</td>			
+		</tr>
+
+		<tr>
+			<td>
+				TIPO DE MONEDA:
+			</td>
+			<td>
+				{{ objeto.repGenerico.tipo_moneda_3}}
+			</td>						
+		</tr>
+
+		<tr>
+			<td>
+				TIPO DE FONDEO:
+			</td>
+			<td>
+				{{ objeto.repGenerico.tipo_fondeo}}
+			</td>					
+		</tr>
+
+		<tr>
+			<td>
+				MONTO DEL BIEN:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.monto_bien_2}}
+			</td>				
+		</tr>
+		
+
+		<tr>
+			<td>
+				MONTO A FINANCIAR:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.monto_financiar_2}}
+			</td>	
+		</tr>
+		
+	</table>
+</div>
+
+
+
+
+
+<br/>
+
+
+
+
+<div align="center">
+	<table>
+		<tr>
+			<td>
+				TASA BASE:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.tasa_base}}
+			</td>
+			<td>
+				TIIE
+			</td>		
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>
+				DIFERENCIAL PUNTOS:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.diferencial_puntos}}
+			</td>
+			<td>
+			</td>	
+			<td></td>						
+		</tr>
+
+		<tr>
+			<td>
+			</td>
+			<td style="text-align:right;">
+				----------
+			</td>
+			<td></td>
+			<td style="text-align:right;">
+				FORMA DE PAGO: {{ objeto.repGenerico.forma_pago}}
+			</td>					
+		</tr>
+
+		<tr>
+			<td>
+				TASA DE OPERACIÓN:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.tasa_operacion}}
+			</td>
+			<td></td>
+			<td style="text-align:right;">
+				TIPO DE PAGO: {{ objeto.repGenerico.tipo_pago}}
+			</td>				
+		</tr>
+		
+	</table>
+</div>
+
+
+<br/>
+
+
+<div align="center">
+	<table>
+		<tr>
+			<td>
+				PAGO INICIAL:
+			</td>
+			<td>
+			</td>			
+		</tr>
+
+		<tr>
+			<td>
+			</td>
+			<td>
+			</td>						
+		</tr>
+
+		<tr>
+			<td>
+				COMISIÓN DE APERTURA:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.comision_apertura_2}}
+			</td>					
+		</tr>
+
+		<tr>
+			<td>
+				ENGANCHE:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.enganche}}
+			</td>				
+		</tr>
+		
+
+		<tr>
+			<td>
+				IVA COMISIÓN APERTURA:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.comision_apertura_2}}
+			</td>	
+		</tr>
+		
+
+		<tr>
+			<td>
+				IVA ENGANCHE:
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.iva_enganche}}
+			</td>	
+		</tr>
+		
+
+		<tr>
+			<td>
+			</td>
+			<td style="text-align:right;">
+				----------------
+			</td>	
+		</tr>
+		
+
+		<tr>
+			<td>
+			</td>
+			<td style="text-align:right;">
+				{{ objeto.repGenerico.total}}
+			</td>	
+		</tr>						
+		
+	</table>
+</div>
+
+
+</div>
+</form>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>DATOS PERSONA MORAL</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/datosPersonaMoralJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+
+</script>
+
+
+
+<form action="">
+
+
+<div ng-controller="myControllerDatPersMoral" align="left">
+
+<br/>
+<br/>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PERTENENCIA A ALGÚN GRUPO&nbsp;&nbsp;&nbsp;
+<input name="pertGpo" type="text" ng-model="loc"  size="2"   placeholder=" {{objeto.datPersMoral.perten_grupo}} " />
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE DE SECTOR&nbsp;&nbsp;&nbsp;
+<input name="cve_sec" type="text" ng-model="loc"  size="10"   placeholder=" {{objeto.datPersMoral.cve_sector}} " />
+<input name="sector" type="text" ng-model="greeting" size="70"  placeholder=" {{objeto.datPersMoral.sector}} " />
+
+</div>
+<br/>
+<br/>
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">SALIR</button>
+</div>
+
+</form>
+
+</body>
+</html>

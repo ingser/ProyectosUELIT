@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">					
+<head>
+<meta charset="ISO-8859-1">
+<title>ACTUALIZAR CONTRATO</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/actualizarContratoJS.js"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+</script>
+
+<div class=lblTitleHea>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TESORERÍA
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTUALIZACIÓN DE CONTRATOS
+</div>
+
+
+<form action="">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerActContrato">
+
+&nbsp;&nbsp;&nbsp;
+
+TIPO DE CONTRATO&nbsp;&nbsp;&nbsp;
+	<input name="contrato" type="text" ng-model="tipoP" size="3"  placeholder=" {{objeto.actContrato.tipo_contrato}} " /> 
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;
+
+CLIENTE&nbsp;&nbsp;&nbsp;
+	<input name="cte"type="text" size="5" ng-model="cte"  placeholder=" {{objeto.actContrato.cve_cte}} " />
+	<input type="text" ng-model="edoCte" size="140"  placeholder=" {{objeto.actContrato.nom_cte}} " />
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;
+
+No. DE CONTRATO&nbsp;&nbsp;&nbsp;
+	<input name="cedula" type="text" ng-model="cedula" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required  
+	placeholder=" {{objeto.actContrato.num_contrato}} " />
+ 	<span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+		Contrato es dato requerido a 8 posiciones.
+	</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+FECHA DEL CONTRATO&nbsp;&nbsp;&nbsp;
+	<input type=date id=dt  placeholder=" {{objeto.actContrato.fec_contrato}} " >
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+CONTRATO&nbsp;&nbsp;&nbsp;
+	<input name="buc" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required 
+	placeholder=" {{objeto.actContrato.contrato}} "  />
+ 	<span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+		La clave numérica BUC es requerida a 8 posiciones.
+	</span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ESTADO&nbsp;&nbsp;&nbsp;
+	<input type="text" ng-model="estado" size="3"  placeholder=" {{objeto.actContrato.estado}} " />
+
+<br/><br/>
+&nbsp;&nbsp;&nbsp;
+
+ARRENDADORA&nbsp;&nbsp;&nbsp;
+	<input name="cte" type="text" size="5" ng-model="cte"  placeholder=" {{objeto.actContrato.cve_arrendadora}} " />
+	<input type="text" ng-model="edoCte" size="55"  placeholder=" {{objeto.actContrato.nom_arrendadora}} " />
+
+
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;
+REVISIÓN DE LA TASA&nbsp;&nbsp;&nbsp;
+	<input type="text" ng-model="tipoP" size="3"  placeholder=" {{objeto.actContrato.rev_tasa}} " /> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. DE RATIFICACIÓN&nbsp;&nbsp;&nbsp;
+	<input type="text" ng-model="status"  placeholder=" {{objeto.actContrato.num_ratificacion}} " />
+
+
+
+
+ 
+<br/><br/>
+
+</div>
+
+</div>
+
+</form>
+
+
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="SUBMIT" name="btnF1" value=" ">ACEPTAR</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F3" title="SALIR" name="btnF3" value=" ">SALIR</button>
+</div>
+
+
+</body>
+</html>

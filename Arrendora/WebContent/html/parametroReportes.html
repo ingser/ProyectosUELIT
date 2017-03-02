@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>PARÁMETRO DE REPORTES</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/parametroReportesJS.js"></script>
+
+</head>
+
+<body>
+
+<form action="">
+
+
+<div ng-controller="myControllerParamRepo" align="center">
+
+<br/>
+<br/>
+
+
+<br/>
+<br/>
+
+<label>PARÁMETROS DE REPORTE</label>
+
+<br/>
+<br/>
+
+<label>INGRESE EL VALOR DE CADA PARÁMETRO</label>
+
+<br/>
+<br/>
+
+	
+	<table>	
+
+		<tr>
+			<td>TIPO DE DESTINO</td>
+			<td>
+				<select name="tipoID">
+   					<option value="PANTALLA">PANTALLA</option> 
+   					<option value="IMPRESORA">IMPRESORA</option> 
+				</select>			
+			</td>
+		</tr>
+		
+		<tr>
+			<td>NOMBRE DEL DESTINO</td>
+			<td><input type="text" ng-model="gra1" size="30"  placeholder=" {{objeto.paramRepo.nombre_destino}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td>FECHA</td>
+			<td><input type="text" ng-model="gra2" size="30"  placeholder=" {{objeto.paramRepo.fecha}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td>CLAVE SUCURSAL</td>
+			<td><input type="text" ng-model="gra3" size="30"  placeholder=" {{objeto.paramRepo.cve_sucursal}} "  /></td>
+		</tr>
+						
+	</table>
+	
+	
+	
+	
+	
+</div>
+
+
+</form>
+
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">ACEPTAR</button>
+</div>
+
+
+</body>
+</html>

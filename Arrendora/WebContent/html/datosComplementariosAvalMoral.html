@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>DATOS COMPLEMENTARIOS AVAL MORAL</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/datosComplementariosAvalMoralJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+var fecha = day + "/" + month + "/" + year;
+</script>
+
+
+<form action="" name="DatosComplAvalMoral">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerDatosComplAvalMoral">
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TEL.&nbsp;&nbsp;&nbsp;<input name="tel1" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.datosComplAvalMoral.tel1}} "  />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXT.&nbsp;&nbsp;&nbsp;<input name="ext1" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.datosComplAvalMoral.ext1}} "  />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TEL.&nbsp;&nbsp;&nbsp;<input name="tel2" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.datosComplAvalMoral.tel2}} "  />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXT.&nbsp;&nbsp;&nbsp;<input name="ext2" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.datosComplAvalMoral.ext2}} "  />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FAX.&nbsp;&nbsp;&nbsp;<input name="fax" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.datosComplAvalMoral.fax}} "  />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXT.&nbsp;&nbsp;&nbsp;<input name="extFax" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.datosComplAvalMoral.extFax}} "  />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. DE ESCRITURA&nbsp;&nbsp;&nbsp;
+<input name="numEscr" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.datosComplAvalMoral.numEscritura}} "  />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA DE ESCRITURA&nbsp;&nbsp;&nbsp;
+<input name="fecEscr" type="text" ng-model="greeting" size="10" placeholder=" {{objeto.datosComplAvalMoral.fechaEscrit}} "  />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. DE NOTARIO&nbsp;&nbsp;&nbsp;
+<input name="numNot" type="text" ng-model="loc"  size="10"   placeholder=" {{objeto.datosComplAvalMoral.numNotario}} " />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NOMBRE&nbsp;&nbsp;&nbsp;
+<input name="nomNot" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.datosComplAvalMoral.nomNotario}} "  />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LUGAR DE NOTARIO&nbsp;&nbsp;&nbsp;
+<input name="lugNot" type="text" ng-model="loc"  size="60"  placeholder=" {{objeto.datosComplAvalMoral.lugarNotario}} "  />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+REGISTRO PÚBLICO&nbsp;&nbsp;&nbsp;
+<input name="regPub" type="text" ng-model="loc"  size="60"  placeholder=" {{objeto.datosComplAvalMoral.regPublico}} "  />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LUGAR DE REGISTRO&nbsp;&nbsp;&nbsp;
+<input name="lugReg" type="text" ng-model="loc"  size="60"  placeholder=" {{objeto.datosComplAvalMoral.lugarReg}} "  />
+
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+OBSERVACIONES
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="obsA1" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.datosComplAvalMoral.obsA1}} "  />
+<input name="obsA2" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.datosComplAvalMoral.obsA2}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="obsB1" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.datosComplAvalMoral.obsB1}} "  />
+<input name="obsB2" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.datosComplAvalMoral.obsB2}} "  />
+
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="obsC1" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.datosComplAvalMoral.obsC1}} "  />
+<input name="obsC2" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.datosComplAvalMoral.obsC2}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="obsD1" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.datosComplAvalMoral.obsD1}} "  />
+<input name="obsD2" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.datosComplAvalMoral.obsD2}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="obsE1" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.datosComplAvalMoral.obsE1}} " />
+<input name="obsE2" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.datosComplAvalMoral.obsE2}} "  />
+
+</div>
+
+
+<br/>
+<br/>
+
+
+</div>
+
+</form>
+
+
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">SALIR</button>
+</div>
+
+
+</body>
+</html>

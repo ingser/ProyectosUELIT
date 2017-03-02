@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">					
+<head>
+<meta charset="ISO-8859-1">
+<title>ACTUALIZACIÓN DE FACTURAS</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/actualizacionFacturaJS.js"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+	var date = new Date();
+	var d  = date.getDate();
+	var day = (d < 10) ? '0' + d : d;
+	var m = date.getMonth() + 1;
+	var month = (m < 10) ? '0' + m : m;
+	var yy = date.getYear();
+	var year = (yy < 1000) ? yy + 1900 : yy;
+	var fecha = day + "/" + month + "/" + year;
+</script>
+
+<div class=lblTitleHea>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TESORERÍA
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTUALIZACIÓN DE FACTURAS
+</div>
+
+
+<form action="" name="Factura">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerFactura">
+
+&nbsp;&nbsp;&nbsp;
+
+CLAVE CLIENTE&nbsp;&nbsp;&nbsp;
+	<input name="cve_cte" type="text" size="5" ng-model="cte" placeholder=" {{objeto.factura.cve_cliente}} "  />
+	<input name="cliente" type="text" ng-model="edoCte" size="140"  placeholder=" {{objeto.factura.cliente}} " />
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;
+No. DE INGRESO&nbsp;&nbsp;&nbsp;
+	<input name="num_ingreso" type="text" ng-model="cedula" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required  placeholder=" {{objeto.factura.num_ingreso}} " />
+ 	<span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+		Contrato es dato requerido a 8 posiciones.
+	</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+No. DE FACTURA&nbsp;&nbsp;&nbsp;
+	<input name="num_factura" type="text" ng-model="cedula" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required  placeholder=" {{objeto.factura.num_factura}} " />
+ 	<span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+		Contrato es dato requerido a 8 posiciones.
+	</span>
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;
+
+CLAVE PROVEEDOR&nbsp;&nbsp;&nbsp;
+	<input name="cve_prov" type="text" size="5" ng-model="cte"  placeholder=" {{objeto.factura.cve_prov}} " />
+	<input type="text" ng-model="edoCte" size="100"  placeholder=" {{objeto.factura.proveedor}} " />
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+FECHA FACTURA&nbsp;&nbsp;&nbsp;
+	<input type=date id=dt  placeholder=" {{objeto.factura.fecha_fact}} " >
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA RECEPCIÓN&nbsp;&nbsp;&nbsp;
+	<input type=date id=dt2  placeholder=" {{objeto.factura.fecha_recep}} " >
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA PAGO&nbsp;&nbsp;&nbsp;
+	<input type=date id=dt3  placeholder=" {{objeto.factura.fecha_pago}} " >
+	
+
+<br/>
+<br/>	
+	
+&nbsp;&nbsp;&nbsp;
+
+ARRENDADORA&nbsp;&nbsp;&nbsp;
+	<input name="cve_arr" type="text" size="5" ng-model="cte"  placeholder=" {{objeto.factura.cve_arrend}} " />
+	<input name="arrendadora" type="text" ng-model="edoCte" size="55"  placeholder=" {{objeto.factura.arrendadora}} " />
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;
+MONTO&nbsp;&nbsp;&nbsp;
+	<input name="monto" type="text" ng-model="cedula" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"  placeholder=" {{objeto.factura.monto}} " required />
+ 	<span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+		Monto es dato requerido a 8 posiciones.
+	</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+IVA&nbsp;&nbsp;&nbsp;
+	<input name="iva" type="text" ng-model="cedula" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"  placeholder=" {{objeto.factura.iva}} " required />
+ 	<span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+		IVA es dato requerido a 8 posiciones.
+	</span>
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;
+
+CLAVE DE MONEDA&nbsp;&nbsp;&nbsp;
+	<input name="cve_mon" type="text" size="5" ng-model="cte"  placeholder=" {{objeto.factura.cve_moneda}} " />
+	<input name="moneda" type="text" ng-model="edoCte" size="20"  placeholder=" {{objeto.factura.moneda}} " />
+	
+&nbsp;&nbsp;&nbsp;
+
+TIPO DE CAMBIO&nbsp;&nbsp;&nbsp;
+	<input name="tipo_camb" type="text" ng-model="edoCte" size="20"  placeholder=" {{objeto.factura.tipo_cambio}} " />	
+
+<br/>
+<br/>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+No. DE CONTRARRECIBO&nbsp;&nbsp;&nbsp;
+	<input name="contrarrecibo" type="text" ng-model="tipoP" size="3"  placeholder=" {{objeto.factura.num_contrarecibo}} " /> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+COTIZACIÓN&nbsp;&nbsp;&nbsp;
+	<input name="cotizacion" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required  placeholder=" {{objeto.factura.cotizacion}} " />
+ 	<span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+		La clave numérica BUC es requerida a 8 posiciones.
+	</span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CONTRATO&nbsp;&nbsp;&nbsp;
+	<input name="contrato" type="text" ng-model="estado" size="3"  placeholder=" {{objeto.factura.contrato}} " />
+
+
+&nbsp;&nbsp;&nbsp;
+ANEXO&nbsp;&nbsp;&nbsp;
+	<input name="anexo" type="text" ng-model="tipoP" size="3"  placeholder=" {{objeto.factura.anexo}} " /> 
+
+ 
+<br/><br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+TIPO DE BIEN&nbsp;&nbsp;&nbsp;
+	<input name="cve_bien" type="text" ng-model="estado" size="3"  placeholder=" {{objeto.factura.cve_bien}} " />
+	<input name="tipo_bien" type="text" ng-model="status"  placeholder=" {{objeto.factura.tipo_bien}} " />
+
+
+
+</div>
+
+</div>
+
+</form>
+
+
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="SUBMIT" name="btnF1" value=" ">ACEPTAR</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F3" title="SALIR" name="btnF3" value=" ">SALIR</button>
+</div>
+
+
+</body>
+</html>

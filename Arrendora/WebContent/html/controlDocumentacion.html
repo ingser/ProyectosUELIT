@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>CONTROL DOCUMENTACIÓN</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/controlDocumentacionJS.js"></script>
+
+</head>
+
+<body>
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;TABLAS Y PARAMETRIZACIÓN
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;CONTROL DOCUMENTACIÓN
+</div>
+
+<form action="">
+
+
+<div ng-controller="myControllerControlDocum" align="left">
+
+<br/>
+<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		TIPO DE DOCUMENTO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="tipDoc" type="text" size="3" ng-model="ctes"  placeholder=" {{objeto.controlDocum.cve_tipo_doc}} " /> 
+			<input type="text" size="30" ng-model="ctes"   placeholder=" {{objeto.controlDocum.tipo_doc}} " /> 
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			TIPO ARRENDAMIENTO&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" ng-model="greeting" size="3"  placeholder=" {{objeto.controlDocum.tipo_arrend}} " />
+			
+			<br/><br/>
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		CLIENTE&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" size="10" ng-model="ctes"  placeholder=" {{objeto.controlDocum.cve_cte}} " /> 
+			<input type="text" size="70" ng-model="ctes"   placeholder=" {{objeto.controlDocum.cliente}} "  />
+			
+		<br/><br/>
+		
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		CONTRATO&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" size="20" ng-model="ctes"  placeholder=" {{objeto.controlDocum.contrato}} " /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			ANEXO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.controlDocum.anexo}} " />
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		PAGARÉ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" size="10" ng-model="ctes"  placeholder=" {{objeto.controlDocum.pagare}} " /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			RESPONSIVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.controlDocum.responsiva}} " />
+
+<br/><br/>
+
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		ADDENDUM
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" size="15" ng-model="ctes"  placeholder=" {{objeto.controlDocum.addendum}} " /> 
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		CONVENIO
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" size="15" ng-model="ctes"  placeholder=" {{objeto.controlDocum.convenio}} " /> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		CESIÓN
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" ng-model="greeting" size="15"  placeholder=" {{objeto.controlDocum.cesion}} " />
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		PRENDA
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.controlDocum.prenda}} " /> 
+			
+			
+<br/><br/>			
+			
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			SUBARRENDAMIENTO&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.controlDocum.subarrendamiento}} " />
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			REESTRUCTURA&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.controlDocum.reestructura}} " />
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			OTRO&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.controlDocum.otro}} " />
+
+
+
+
+
+
+
+<br/>
+<br/>
+
+<table>
+	<tr>
+		<td align="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		ENVÍO FIRMA CLIENTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.controlDocum.envio_firma_cte}} " /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			REGRESO FIRMADO POR EL CLIENTE&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.controlDocum.regreso_firmado_cte}} " />
+		</td>
+	<tr/>
+	
+	<tr>
+		<td align="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		SOLICITUD DE CHEQUE&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.controlDocum.solicitud_cheq}} " /> 
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			ENTREGA PARA FIRMAS INTERNAS&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.controlDocum.entrega_firmas_internas}} " />			
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		ENVÍO A RATIFICAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.controlDocum.envio_ratificar}} " /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			REGRESO RATIFICACIÓN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.controlDocum.regreso_ratificacion}} " />
+		</td>
+	</tr>
+	<tr>
+		<td align="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		ENTREGA A CLIENTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.controlDocum.entrega_cte}} " /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			RECEPCIÓN DE ACUSE DE RECIBO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.controlDocum.recepcion_acuse}} " />
+		</td>
+	<tr/>
+	
+	<tr>
+		<td align="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		ENTREGA DE ARCHIVO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.controlDocum.entrega_archivo}} " /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</td>
+	</tr>
+		
+</table>
+
+</div>
+
+</form>
+
+<br/>
+<br/>
+
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">SALIR</button>
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">ACTUALIZAR</button>
+</div>
+
+
+
+
+</body>
+</html>

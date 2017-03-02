@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>EGRESOS (EMISIÓN MANUAL)</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/egresosEmisManJS.js"></script>
+
+</head>
+
+<body>
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+
+<br/>
+<br/>
+
+</div>	
+
+<form action="" name="EgrEmisMan">
+
+
+<div ng-controller="myControllerEgresosEmisMan" align="left">
+
+<br/>
+<br/>
+
+ 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EGRESOS (EMISIÓN MANUAL)
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+TRANSACCIÓN&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" size="3" ng-model="ctes" />
+	<br />
+	<br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FECHAS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CAPTURA
+		<input type="text" size="20" ng-model="ctes"  placeholder=" {{objeto.egresosEmisMan.fec_captura}} " />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EMISIÓN
+		<input type="text" ng-model="greeting" size="20"  placeholder=" {{objeto.egresosEmisMan.fec_emision}} " />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PROGRAMADA
+		<input type="text" ng-model="greeting" size="20"  placeholder=" {{objeto.egresosEmisMan.fec_programada}} " />
+<br />
+<br />
+	
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BENEFICIARIO&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" size="3" ng-model="ctes"  placeholder=" {{objeto.egresosEmisMan.beneficiario_campo1}} " /> 
+		<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.egresosEmisMan.beneficiario_campo2}} " />
+		<input type="text" ng-model="greeting" size="50"  placeholder=" {{objeto.egresosEmisMan.beneficiario_campo3}} " />
+<br />
+<br />				
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONTO&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.egresosEmisMan.monto}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;TIPO DE PAGO&nbsp;&nbsp;&nbsp;&nbsp;		 
+		<input type="text" ng-model="greeting" size="3" placeholder=" {{objeto.egresosEmisMan.tipo_pago}} "  />
+&nbsp;&nbsp;&nbsp;&nbsp;TIPO DE CHEQUE&nbsp;&nbsp;&nbsp;&nbsp;		 
+		<input type="text" ng-model="greeting" size="3" placeholder=" {{objeto.egresosEmisMan.tipo_cheque}} "  />
+		
+				
+<br />
+<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CUENTA EMISORA&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.egresosEmisMan.cuenta_emisora_campo1}} " />		 
+		<input type="text" ng-model="greeting" size="20"  placeholder=" {{objeto.egresosEmisMan.cuenta_emisora_campo2}} " />		 
+		<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.egresosEmisMan.cuenta_emisora_campo3}} " />
+
+				
+<br />
+<br />
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO EMISOR&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.egresosEmisMan.cve_banco_emisor}} "  />		 
+		<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.egresosEmisMan.banco_emisor}} " />		 
+
+<br />
+<br />
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No. DE CHEQUE&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.egresosEmisMan.num_cheque}} " />		
+&nbsp;&nbsp;&nbsp;&nbsp;MONEDA&nbsp;&nbsp;&nbsp;&nbsp;		
+		<input type="text" ng-model="greeting" size="3"  placeholder=" {{objeto.egresosEmisMan.cve_moneda}} " />	 
+		<input type="text" ng-model="greeting" size="30" placeholder=" {{objeto.egresosEmisMan.moneda}} "  />		 
+
+<br />
+<br />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO DEPÓSITO&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.egresosEmisMan.cve_banco_deposito}} " />		 
+		<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.egresosEmisMan.banco_deposito}} " />		 
+
+<br />
+<br />
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No. DE CUENTA&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.egresosEmisMan.num_cuenta}} " />		
+&nbsp;&nbsp;&nbsp;&nbsp;PLAZA&nbsp;&nbsp;&nbsp;&nbsp;		
+		<input type="text" ng-model="greeting" size="30" placeholder=" {{objeto.egresosEmisMan.plaza}} "  />		 
+
+<br />
+<br />
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONCEPTO&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" size="6" ng-model="ctes"  placeholder=" {{objeto.egresosEmisMan.concepto1}} " />
+<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" size="60" ng-model="ctes" placeholder=" {{objeto.egresosEmisMan.concepto2}} "  />
+<br />		
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" size="60" ng-model="ctes"  placeholder=" {{objeto.egresosEmisMan.concepto3}} " />
+		
+	
+</div>		
+	
+</form>
+			
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>CÁLCULO DE LA COTIZACIÓN</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/calculoCotizacionJS.js"></script>
+
+</head>
+
+<body>
+
+<form action="">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerCalculoCotizacion">
+
+
+	<div align="center">
+		<button type="button" id="F1" title="" name="btnF1" value=" ">VISUALIZAR TABLA</button>
+	</div>
+	
+	<br/>
+<br/>
+	
+<div align="center">
+
+<table>
+	<tr>
+		<td>
+			<input name="tabla1" type="text" size="50" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.tabla1}} " /> 
+			<input name="tablaA" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.tablaA}} " />
+		</td>
+	<tr/>
+	
+	<tr>
+		<td>
+			<input name="tabla2" type="text" size="50" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.tabla2}} " /> 
+			<input name="tablaB" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.tablaB}} " />		
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input name="tabla3" type="text" size="50" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.tabla3}} " /> 
+			<input name="tablaC" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.tablaC}} " />
+		</td>
+	<tr/>
+	
+	<tr>
+		<td>
+			<input name="tabla4" type="text" size="50" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.tabla4}} " /> 
+			<input name="tablaD" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.tablaD}} " />		
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input name="tabla5" type="text" size="50" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.tabla5}} " /> 
+			<input name="tablaE" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.tablaE}} "  />
+		</td>
+	<tr/>
+	
+	<tr>
+		<td>
+			<input name="tabla6" type="text" size="50" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.tabla6}} " /> 
+			<input name="tablaF" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.tablaF}} " />		
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input name="tabla7" type="text" size="50" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.tabla7}} " /> 
+			<input name="tablaG" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.tablaG}} " />
+		</td>
+	<tr/>
+	
+	<tr>
+		<td>
+			<input name="tabla8" type="text" size="50" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.tabla8}} " /> 
+			<input name="tablaH" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.tablaH}} " />		
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input name="tabla9" type="text" size="50" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.tabla9}} " /> 
+			<input name="tablaI" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.tablaI}} " />
+		</td>
+	<tr/>
+	
+	<tr>
+		<td>
+			<input name="tabla10" type="text" size="50" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.tabla10}} " /> 
+			<input name="tablaJ" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.tablaJ}} " />		
+		</td>
+					
+	
+</table>
+
+</div>
+
+
+
+<br/>
+<br/>
+
+<table>
+	<tr>
+		<td align="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		MONTO A FINANCIAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="montoFinanc" type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.montoFinanc}} " /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			PAGO INICIAL&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="paoInic" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.pagoInic}} " />
+		</td>
+	<tr/>
+	
+	<tr>
+		<td align="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		IVA MONTO FINANCIADO&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="ivaMontoFinanc" type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.ivaMontoFinanc}} " /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		PLAZO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="plazo" type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.plazo}} " /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			CAPITAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="capital" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.capital}} " />
+		</td>
+	</tr>
+	<tr>
+		<td align="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		TASA ORIGINAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="tasaOrig" type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.tasaOriginal}} " /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			IVA CAPITAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="ivaCap" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.ivaCapital}} " />
+		</td>
+	<tr/>
+	
+	<tr>
+		<td align="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		VALOR CONTRATO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="valorContr" type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.valorContrato}} " /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			INTERÉS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="interes" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.interes}} " />
+		</td>
+	</tr>
+	<tr>
+		<td align="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		CARGA FINANCIERA&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="cargoFinan" type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.cargaFinanc}} " /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			IVA/INTERÉS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="ivaInt" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.ivaInteres}} " />
+		</td>
+	<tr/>
+	
+	<tr>
+		<td align="left">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		TASA EFECTIVA&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="tasaEfect" type="text" size="30" ng-model="ctes"  placeholder=" {{objeto.calculoCotizacion.tasaEfectiva}} " /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			PAGO POR RENTA&nbsp;&nbsp;&nbsp;&nbsp;
+			<input name="pagoRenta" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.calculoCotizacion.pagoRenta}} " />
+		</td>
+	</tr>
+	
+</table>
+
+</div>
+
+</div>
+
+</form>
+
+
+
+</body>
+</html>

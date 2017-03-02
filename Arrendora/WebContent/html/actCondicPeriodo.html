@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>ACTUALIZACIÓN DE CONDICIONES POR PERIODO</title>
+
+<link rel="stylesheet" href="../css/apl_1.css"/>
+
+<script src="../lib/angular.js"></script>
+<script src="../js/actCondicPeriodoJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+
+</script>
+
+<form action="">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerActCondPeriodo">
+
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TABLAS Y PARAMETRIZACIÓN
+<br/>
+
+
+</div>	
+
+
+<div>
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PER PER TIP CAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONTO DE RENTA
+<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+GRA REN REN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FIJA
+</div>
+
+
+<br/><br/>
+
+	
+	<table>	
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input name="gra1" type="text" ng-model="gra1" size="7" placeholder=" {{ objeto.actCondPeriodo.gra1 }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA1" size="3" placeholder=" {{ objeto.actCondPeriodo.renA1 }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB1" size="3" placeholder=" {{ objeto.actCondPeriodo.renB1 }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA1" size="3" placeholder=" {{ objeto.actCondPeriodo.fijaA1 }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB1" size="60" placeholder=" {{ objeto.actCondPeriodo.fijaB1 }} " /></td>						
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra2" size="7" placeholder=" {{ objeto.actCondPeriodo.gra2 }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA2" size="3" placeholder=" {{ objeto.actCondPeriodo.renA2 }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB2" size="3" placeholder=" {{ objeto.actCondPeriodo.renB2 }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB2" size="3" placeholder=" {{ objeto.actCondPeriodo.fijaA2 }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model=fijaB2 size="60" placeholder=" {{ objeto.actCondPeriodo.fijaB2 }} " /></td>	
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra3" size="7" placeholder=" {{ objeto.actCondPeriodo.gra3 }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renA3" size="3" placeholder=" {{ objeto.actCondPeriodo.renA3 }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="renB3" size="3" placeholder=" {{ objeto.actCondPeriodo.renB3 }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaA3" size="3" placeholder=" {{ objeto.actCondPeriodo.fijaA3 }} " /></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="fijaB3" size="60" placeholder=" {{ objeto.actCondPeriodo.fijaB3 }} " /></td>	
+		</tr>
+				
+	</table>
+	
+</div>
+
+</div>
+
+</form>
+
+
+
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">Registrar cambios</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+
+
+</body>
+</html>

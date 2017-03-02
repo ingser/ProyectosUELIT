@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>MENÚ GENERAL</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/menuPrincipalJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+
+</script>
+
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+<br/>
+<br/>
+<div align="center">MENÚ GENERAL (SISTEMAS)</div>
+
+
+</div>	
+
+<br/>
+
+
+<div>
+
+<div ng-controller="myController" align="left">
+<form name="parametrizacion">
+
+<div ng-controller="myControllerFechaValor" align="center">
+
+<select name="tipoID">
+   <option value="0">MENÚ DE PROMOCIÓN</option> 
+   <option value="1">MENÚ DE OPERACIÓN DE CRÉDITO</option> 
+   <option value="2">MENÚ DE CONTABILIDAD</option>
+   <option value="3">MENÚ DE CATÁLOGOS</option> 
+   <option value="4">MENÚ DE CONSULTAS GENERALES</option> 
+   <option value="5">MENÚ DE REPORTES GENERALES</option>
+   <option value="6">MENÚ DE FORMAS (SISTEMAS)</option>
+   <option value="7">PANTALLA DOCCOB, DOCCOBDET, APL%</option>
+   <option value="8">ACCESO SQL</option> 
+</select> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	
+<!-- 	<table>	 -->
+		
+<!-- 		<tr> -->
+<!-- 			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="100" placeholder="" /></td> -->
+<!-- 		</tr> -->
+		
+<!-- 		<tr> -->
+<!-- 			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra2" size="100" placeholder="" /></td> -->
+<!-- 		</tr> -->
+		
+<!-- 		<tr> -->
+<!-- 			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra3" size="100" placeholder="" /></td> -->
+<!-- 		</tr> -->
+<!-- 		<tr> -->
+<!-- 			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="100" placeholder="" /></td> -->
+<!-- 		</tr> -->
+		
+<!-- 		<tr> -->
+<!-- 			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra2" size="100" placeholder="" /></td> -->
+<!-- 		</tr> -->
+		
+<!-- 		<tr> -->
+<!-- 			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra3" size="100" placeholder="" /></td> -->
+<!-- 		</tr> -->
+<!-- 		<tr> -->
+<!-- 			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra1" size="100" placeholder="" /></td> -->
+<!-- 		</tr> -->
+		
+<!-- 		<tr> -->
+<!-- 			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra2" size="100" placeholder="" /></td> -->
+<!-- 		</tr> -->
+		
+<!-- 		<tr> -->
+<!-- 			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="gra3" size="100" placeholder="" /></td> -->
+<!-- 		</tr>				 -->
+				
+<!-- 	</table> -->
+
+
+
+	
+</div>
+
+
+
+
+</form>
+
+</div>
+</div>
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">MENÚ ANTERIOR</button>
+</div>
+
+
+</body>
+</html>

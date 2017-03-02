@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>ALTA CATÁLOGO DE PROSPECTOS-CLIENTES</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/altaCatalogoProspectosClientesJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+
+</script>
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DESARROLLO DE SISTEMAS
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ALTA CATÁLOGO DE PROSPECTOS CLIENTES
+</div>
+
+
+
+<form action="" name="ProspClientes">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerProspCtes">
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ESTADO DEL CLIENTE&nbsp;&nbsp;&nbsp;
+<input name="edo_cte" type="text" ng-model="edoCte" size="5" placeholder=" {{objeto.prospCtes.edo_cte }} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TIPO DE PERSONA&nbsp;&nbsp;&nbsp;
+<input name="tipo_pers" type="text" ng-model="edoCte" size="5"  placeholder=" {{objeto.prospCtes.tipo_persona }} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE&nbsp;&nbsp;
+<input name="clave" type="text" size="20" ng-model="ctes"  placeholder=" {{objeto.prospCtes.clave }} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NOMBRE&nbsp;&nbsp;
+<input name="nombre" type="text" ng-model="greeting" size="90"  placeholder=" {{objeto.prospCtes.nombre }} "  />
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+R.F.C.&nbsp;&nbsp;
+<input name="rfc" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required  placeholder=" {{objeto.prospCtes.rfc }} "  />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	La clave numérica BUC es requerida a 8 posiciones.
+</span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CÉDULA&nbsp;&nbsp;&nbsp;
+<input name="cedula" type="text" ng-model="greeting"  placeholder=" {{objeto.prospCtes.cedula }} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA DE CONTACTO&nbsp;&nbsp;&nbsp;
+<input type=date id=dt  placeholder=" {{objeto.prospCtes.fecha_contacto }} " >
+<script>
+document.getElementById('dt').value = fecha;
+</script>
+
+<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE PROMOTOR&nbsp;&nbsp;&nbsp;
+<input name="cve_prom" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" size="2" required  placeholder=" {{objeto.prospCtes.cve_prom }} " />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	TOTAL AUTORIZADO es requerido a 8 posiciones.
+</span>
+<input name="promotor" type="text" ng-model="greeting" size="90"  placeholder=" {{objeto.prospCtes.promotor }} "  />
+
+<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE CONTACTO&nbsp;&nbsp;&nbsp;
+<input name="cve_contacto" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" size="2" required  placeholder=" {{objeto.prospCtes.cve_contacto }} " />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	TOTAL DISPUESTO es requerido a 8 posiciones.
+</span>
+<input name="contacto" type="text" ng-model="greeting" size="90"  placeholder=" {{objeto.prospCtes.contacto }} " />
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TEL.&nbsp;&nbsp;&nbsp;
+<input name="tel1" type="text" size="10" ng-model="ctes"  placeholder=" {{objeto.prospCtes.tel1 }} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXT.&nbsp;&nbsp;&nbsp;
+<input name="ext1" type="text" size="10" ng-model="ctes"  placeholder=" {{objeto.prospCtes.ext1 }} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TEL.&nbsp;&nbsp;&nbsp;
+<input name="tel2" type="text" size="10" ng-model="ctes"  placeholder=" {{objeto.prospCtes.tel2 }} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXT.&nbsp;&nbsp;&nbsp;
+<input name="ext2" type="text" size="10" ng-model="ctes"  placeholder=" {{objeto.prospCtes.ext2 }} " />
+
+&nbsp;&nbsp;&nbsp;
+SECTOR SENICREB&nbsp;&nbsp;&nbsp;
+<input name="sector" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" size="2" required  placeholder=" {{objeto.prospCtes.sector }} "  />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	SECTOR es requerido a 8 posiciones.
+</span>
+<input name="senicreb" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.prospCtes.senicreb }} " />
+
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FAX&nbsp;&nbsp;&nbsp;
+<input name="faxA" type="text" size="10" ng-model="ctes"  placeholder=" {{objeto.prospCtes.faxA }} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXT.&nbsp;&nbsp;&nbsp;
+<input name="extA" type="text" size="10" ng-model="ctes"  placeholder=" {{objeto.prospCtes.extA }} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FAX&nbsp;&nbsp;&nbsp;
+<input name="faxB" type="text" size="10" ng-model="ctes"  placeholder=" {{objeto.prospCtes.faxB }} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXT.&nbsp;&nbsp;&nbsp;
+<input name="extB" type="text" size="10" ng-model="ctes"  placeholder=" {{objeto.prospCtes.extB }} " />
+
+&nbsp;&nbsp;&nbsp;
+ACT. SENICREB&nbsp;&nbsp;&nbsp;
+<input name="act" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" size="2" required  placeholder=" {{objeto.prospCtes.act }} " />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	SECTOR es requerido a 8 posiciones.
+</span>
+<input name="senicrebAct" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.prospCtes.senicrebAct }} " />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EDO. CTA.&nbsp;&nbsp;&nbsp;
+<input name="edo_cta" type="text" ng-model="edoCte" size="5"  placeholder=" {{objeto.prospCtes.edo_cta }} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+DÍA COBRO&nbsp;&nbsp;&nbsp;
+<input name="dia_cobro" type="text" ng-model="edoCte" size="5"  placeholder=" {{objeto.prospCtes.dia_cobro }} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FORMA PAGO&nbsp;&nbsp;&nbsp;
+<input name="forma_pago" type="text" ng-model="edoCte" size="5"  placeholder=" {{objeto.prospCtes.forma_pago }} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE BUC&nbsp;&nbsp;&nbsp;
+<input name="cve_buc" type="text" ng-model="edoCte" size="5"  placeholder=" {{objeto.prospCtes.cve_buc }} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;
+SUCURSAL COBRANZA&nbsp;&nbsp;&nbsp;
+<input name="cve_suc" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" size="2" required  placeholder=" {{objeto.prospCtes.sucursal }} " />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	SECTOR es requerido a 8 posiciones.
+</span>
+<input name="sucursal" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.prospCtes.cobranza }} " />
+
+</div>
+
+<br/>
+<br/>
+
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Módulo Representantes y Avales" name="btnF1" value=" ">DIRECTORIO DE CLIENTES</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F2" title="Módulo Accionistas" name="btnF2" value=" ">ACCIONISTAS</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F3" title="Módulo Cuenta Cheques" name="btnF3" value=" ">CUENTAS CHEQUES</button>
+</div>
+
+
+
+</div>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>PAGE_2</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/datosSubcotizacionJS.js"></script>
+
+</head>
+
+<body>
+
+	<br />
+
+<form action="" name="DatosSubCotiz">
+
+
+<div align="left">
+
+<br/>
+<br/>
+	 
+	<h2><label>DATOS SUBCOTIZACIÓN</label></h2>
+				 
+<br/><br/>
+				 
+</div>
+
+
+<div  ng-controller="myControllerDatosSubCotiz">				 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				 
+SUBCOTIZACIÓN&nbsp;&nbsp;
+<input name="subCotiza" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.subcotizacion}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+TASA ORI. &nbsp;&nbsp;
+<input name="tasaOri" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.tasa_ori}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+TASA FIJA &nbsp;&nbsp;
+<input name="tasaFija" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.tasa_fija}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+I.V.A. &nbsp;&nbsp;
+<input name="iva" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.iva}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PLAZO ARREND.&nbsp;&nbsp;
+<input name="pzoArrend" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.plazo_arrendadora}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;					
+
+PLAZO SEGURO&nbsp;&nbsp;
+<input name="pzoSeg" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.plazo_seguro}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+MONEDA&nbsp;&nbsp;
+<input name="cve_moneda" type="text"	size="5" ng-model="ctes"  placeholder=" {{objeto.datosSubCotiz.cve_moneda}} " />
+<input name="moneda" type="text"	size="20" ng-model="ctes" placeholder=" {{objeto.datosSubCotiz.moneda}} "  />
+				 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 
+TASA EN CURVA&nbsp;&nbsp;
+<input name="tasaEnCurva" type="text" ng-model="greeting" size="3"  placeholder=" {{objeto.datosSubCotiz.tasa_en_curva}} " />
+
+
+
+<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				 
+PERIODICIDAD&nbsp;&nbsp;
+<input name="periodicidad" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.periodicidad}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+MONTO DEPÓSITO &nbsp;&nbsp;
+<input name="monDep" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.monto_deposito}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+PRÓXIMO VENCIMIENTO &nbsp;&nbsp;
+<input name="proxVenc" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.prox_venc}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				 
+RESIDUAL&nbsp;&nbsp;
+<input name="residual" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.residual}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA DE INICIO &nbsp;&nbsp;
+<input name="fecIni" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.fecha_inicio}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA FINAL &nbsp;&nbsp;
+<input name="fecFin" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.fecha_final}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				 
+ÚLTIMO PER. GENERADO&nbsp;&nbsp;
+<input name="ultPerGen" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.ultimo_periodo_generado}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+ÚLTIMO PER. GENERADO SEGURO &nbsp;&nbsp;
+<input name="ultPerGenSeg" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.ultimo_periodo_generado_seguro}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+TASA BASE &nbsp;&nbsp;
+<input name="tasaBase" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.tasa_base}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+		
+
+<br/><br/>	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+INDICADOR&nbsp;&nbsp;
+<input name="ind1" type="text" ng-model="greeting" size="3"  placeholder=" {{objeto.datosSubCotiz.indicador_1}} " />
+<input name="ind2" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.indicador_2}} " />
+<input name="ind3" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.indicador_3}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+DIF. &nbsp;&nbsp;
+<input name="dif1" type="text" ng-model="greeting" size="3"  placeholder=" {{objeto.datosSubCotiz.dif_1}} " />
+<input name="dif2" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.dif_2}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+TASA CURVA &nbsp;&nbsp;
+<input name="tasaCurva" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.tasa_curva}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+IND. ORIG.&nbsp;&nbsp;
+<input name="orig1" type="text" ng-model="greeting" size="3"  placeholder=" {{objeto.datosSubCotiz.ind_origen1}} " />
+<input name="orig2" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.ind_origen2}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+TIPO PAGO &nbsp;&nbsp;
+<input name="tipoPago" type="text" ng-model="greeting" size="3"  placeholder=" {{objeto.datosSubCotiz.tipo_pago}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+FINAN. SEGURO &nbsp;&nbsp;
+<input name="finanSeg" type="text" ng-model="greeting" size="3"  placeholder=" {{objeto.datosSubCotiz.finan_seguro}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+RENTA ANTICIPADA &nbsp;&nbsp;
+<input name="rentAnt" type="text" ng-model="greeting" size="3"  placeholder=" {{objeto.datosSubCotiz.renta_anticipada}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+S.I. CAPITAL&nbsp;&nbsp;
+<input name="siCAP" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.si_capital}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+S.I. SEGURO &nbsp;&nbsp;
+<input name="siSEG" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.si_seguro}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+ESTATUS &nbsp;&nbsp;
+<input name="status" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.status}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+RECURSO&nbsp;&nbsp;
+<input name="rec1" type="text" ng-model="greeting" size="3"  placeholder=" {{objeto.datosSubCotiz.recurso1}} " />
+<input name="rec2" type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosSubCotiz.recurso2}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;
+IVA DIFERIDO &nbsp;&nbsp;
+<input name="ivaDifer" type="text" ng-model="greeting" size="3"  placeholder=" {{objeto.datosSubCotiz.iva_diferido}} " />
+
+
+
+
+
+	</div>
+
+</form>
+
+	<br />
+	<div align="center">
+		<button type="button" id="F1" title=""
+			name="btnF1" value=" ">CONDICIONES POR PERIODO</button>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" id="F1" title=""
+			name="btnF1" value=" ">SALIR</button>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
+
+
+
+</body>
+</html>

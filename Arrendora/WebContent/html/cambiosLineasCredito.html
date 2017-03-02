@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>CAMBIOS A LÍNEAS CRÉDITO</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/cambiosLineasCreditoJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+
+</script>
+
+
+<form action="">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerCambiosLineasCredito">
+
+
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TESORERÍA
+
+<br/>
+<br/>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE CLIENTE.&nbsp;&nbsp;&nbsp;
+<input name="cveCte" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.cambiosLineasCredito.cve_cte}} "  />
+<input name="nomCte" type="text" ng-model="loc"  size="60"  placeholder=" {{objeto.cambiosLineasCredito.nombre_cte}} "  />
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+RESOLUCIÓN.&nbsp;&nbsp;&nbsp;<input name="resolucion" type="text" ng-model="loc"  size="20"   placeholder=" {{objeto.cambiosLineasCredito.resolucion}} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ESTATUS&nbsp;&nbsp;&nbsp;<input name="status" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.cambiosLineasCredito.status}} "   />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ASEGURA&nbsp;&nbsp;&nbsp;<input name="asegura" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.cambiosLineasCredito.asegura}} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MONTO&nbsp;&nbsp;&nbsp;<input name="monto" type="text" ng-model="loc"  size="20"   placeholder=" {{objeto.cambiosLineasCredito.monto}} " />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TOTAL AUT.&nbsp;&nbsp;&nbsp;
+<input name="totAut" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.cambiosLineasCredito.tot_aut}} "  />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TOTAL DISP.&nbsp;&nbsp;&nbsp;
+<input name="totDis" type="text" ng-model="greeting" size="40"  placeholder=" {{objeto.cambiosLineasCredito.tot_disp}} " />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA AUTO.&nbsp;&nbsp;&nbsp;
+<input name="fecAuto" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.cambiosLineasCredito.fecha_auto}} "  />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA VENC.&nbsp;&nbsp;&nbsp;
+<input name="fecVen1" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.cambiosLineasCredito.fecha_venc1}} "  />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA VENC.&nbsp;&nbsp;&nbsp;
+<input name="fecVen2" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.cambiosLineasCredito.fecha_venc2}} "  />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE LÍNEA&nbsp;&nbsp;&nbsp;
+<input name="cveLin" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.cambiosLineasCredito.cve_linea}} "  />
+<input name="cveLinB" type="text" ng-model="loc"  size="60"  placeholder=" {{objeto.cambiosLineasCredito.cve_lineaB}} "  />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE AUTO.&nbsp;&nbsp;&nbsp;
+<input name="cveAut1" type="text" ng-model="loc"  size="2"  placeholder=" {{objeto.cambiosLineasCredito.cve_auto1}} "  />
+<input name="cveAut2" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.cambiosLineasCredito.cve_auto2}} "  />
+<input name="cveAut3" type="text" ng-model="loc"  size="60"  placeholder=" {{objeto.cambiosLineasCredito.cve_auto3}} "  />
+
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NÚM. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+GAR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+DESCRIPCIÓN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+OBSERVACIONES 
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="num1" type="text" ng-model="loc"  size="9"   placeholder=" {{objeto.cambiosLineasCredito.num1}} " />
+<input name="gar1" type="text" ng-model="loc"  size="3"   placeholder=" {{objeto.cambiosLineasCredito.gar1}} " />
+<input name="des1" type="text" ng-model="loc"  size="60"  placeholder=" {{objeto.cambiosLineasCredito.descrip1}} "  />
+<input name="obs1" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.cambiosLineasCredito.observ1}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="num2" type="text" ng-model="loc"  size="9"   placeholder=" {{objeto.cambiosLineasCredito.num2}} " />
+<input name="gar2" type="text" ng-model="loc"  size="3"   placeholder=" {{objeto.cambiosLineasCredito.gar2}} " />
+<input name="des2" type="text" ng-model="loc"  size="60"  placeholder=" {{objeto.cambiosLineasCredito.descrip2}} "  />
+<input name="obs2" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.cambiosLineasCredito.observ2}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="num3" type="text" ng-model="loc"  size="9"  placeholder=" {{objeto.cambiosLineasCredito.num3}} "  />
+<input name="gar3" type="text" ng-model="loc"  size="3"   placeholder=" {{objeto.cambiosLineasCredito.gar3}} " />
+<input name="des3" type="text" ng-model="loc"  size="60"   placeholder=" {{objeto.cambiosLineasCredito.descrip3}} " />
+<input name="obs3" type="text" ng-model="loc"  size="40"   placeholder=" {{objeto.cambiosLineasCredito.observ3}} " />
+
+
+</div>
+
+
+</div>
+
+</form>
+
+
+<br/>
+<br/>
+<div align="center">
+	CONDICIONES: 
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">ARRENDAMIENTO</button>
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">ANTICIPOS</button>
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">GARANTÍAS</button>
+</div>
+
+
+</body>
+</html>

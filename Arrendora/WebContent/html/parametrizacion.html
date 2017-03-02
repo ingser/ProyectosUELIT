@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>PARAMETRIZACIÓN</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/parametrizacionJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+</script>
+
+<div class=lblTitleHea>
+<br/>
+&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;TABLAS Y PARAMETRIZACIÓN
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;ACTUALIZACIÓN DE VALORES E INDICADORES
+</div>
+
+<div ng-controller="myControllerParametrizacion" align="center">
+<form name="parametrizacion">
+
+<br/><br/>
+
+CLAVE INDICADOR&nbsp;&nbsp;&nbsp;
+<select name="cveIND">
+   <option value="05">05</option>
+   <option value="06">06</option> 
+   <option value="09">09</option>
+   <option value="10">10</option>
+   <option value="18">18</option>
+
+</select>
+
+&nbsp;&nbsp;&nbsp;
+<select name="tipoIND">
+   <option value="LIBOR 30 DÍAS">LIBOR 30 DÍAS</option> 
+   <option value="LIBOR 90 DÍAS">LIBOR 90 DÍAS</option> 
+   <option value="LIBOR 180 DÍAS">LIBOR 180 DÍAS</option>
+   <option value="TIIE">TIIE</option>
+   <option value="TIIE DIARIA">TIIE DIARIA</option>
+    
+</select> 
+
+<br/><br/>
+
+
+<br/><br/>
+
+
+<div ng-controller="myControllerParametrizacion">
+	
+	<table>
+		<tr>
+			<td>FECHA</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>VALOR</td>
+		</tr>	
+		<tr>
+			<td><input type="text" ng-model="fecha1" size="20" placeholder=" {{ objeto.parametrizacion.fecha1 }} " /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><input type="text" ng-model="valor1" size="20" placeholder=" {{ objeto.parametrizacion.valor1 }} " /></td>
+		</tr>
+		
+		<tr>
+			<td><input type="text" ng-model="fecha2" size="20" placeholder=" {{ objeto.parametrizacion.fecha2 }} " /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><input type="text" ng-model="valor2" size="20" placeholder=" {{ objeto.parametrizacion.valor2 }} " /></td>
+		</tr>
+		
+		<tr>
+			<td><input type="text" ng-model="fecha3" size="20" placeholder=" {{ objeto.parametrizacion.fecha3 }} " /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><input type="text" ng-model="valor3" size="20" placeholder=" {{ objeto.parametrizacion.valor3 }} " /></td>
+		</tr>
+		
+		<tr>
+			<td><input type="text" ng-model="fecha4" size="20" placeholder=" {{ objeto.parametrizacion.fecha4 }} " /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><input type="text" ng-model="valor4" size="20" placeholder=" {{ objeto.parametrizacion.valor4 }} " /></td>
+		</tr>
+		
+		<tr>
+			<td><input type="text" ng-model="fecha5" size="20" placeholder=" {{ objeto.parametrizacion.fecha5 }} " /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><input type="text" ng-model="valor5" size="20" placeholder=" {{ objeto.parametrizacion.valor5 }} " /></td>
+		</tr>
+		
+		<tr>
+			<td><input type="text" ng-model="fecha6" size="20" placeholder=" {{ objeto.parametrizacion.fecha6 }} " /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><input type="text" ng-model="valor6" size="20" placeholder=" {{ objeto.parametrizacion.valor6 }} " /></td>
+		</tr>
+		
+	</table>
+	
+</div>
+
+
+
+</form>
+
+</div>
+
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">Registrar cambios</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+
+
+</body>
+</html>

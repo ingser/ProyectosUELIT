@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>PAGE_13</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/page13JS.js"></script>
+
+</head>
+
+<body>
+
+
+
+<form action="">
+
+
+<div ng-controller="ControllerPage13" align="left">
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TABLA&nbsp;&nbsp;
+<input type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.page13.tabla}} " /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+TIPO DE RECURSO&nbsp;&nbsp;
+<input type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.page13.cve_tipo_recurso}} " /> 
+<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.page13.tipo_recurso}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+MONTO DE APOYO&nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="30" placeholder=" {{objeto.page13.monto_apoyo}} "  />
+<br />
+<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MONEDA&nbsp;&nbsp;
+<input type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.page13.cve_moneda}} " /> 
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.page13.moneda}} " />
+					 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TIPO DE CAMBIO&nbsp;&nbsp; 
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.page13.tipo_cambio}} " />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FACTOR DE IVA&nbsp;&nbsp;&nbsp;
+<input type="text" ng-model="edoCte" size="10"  placeholder=" {{objeto.page13.factor_iva}} " /> 
+				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+IVA DIFERIDO
+<input  type="text" size="5" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.page13.iva_diferido}} " /> 
+			<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es requerido a 8 posiciones. 
+			</span>
+<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				
+MONTO BIEN(ES)&nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="20"  placeholder=" {{objeto.page13.monto_bienes}} " />
+ 				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+IVA&nbsp;&nbsp;&nbsp;
+<input type="text" ng-model="edoCte" size="10"  placeholder=" {{objeto.page13.iva}} "  /> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MONTO IVA&nbsp;&nbsp;&nbsp;
+<input type="text" ng-model="edoCte" size="10"  placeholder=" {{objeto.page13.monto_iva}} "  /> 
+				
+				<br /> <br />
+				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+INDICADOR&nbsp;&nbsp;&nbsp;
+		<input size="5" type="text" ng-model="greeting"  placeholder=" {{objeto.page13.indicador_1}} " />
+		<input size="20" type="text" ng-model="greeting"  placeholder=" {{objeto.page13.indicador_2}} " />
+		<input size="10" type="text" ng-model="greeting"  placeholder=" {{objeto.page13.indicador_3}} " />
+			
+			
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+TIPO DIFERENCIAL&nbsp;&nbsp;&nbsp;
+<input  type="text" size="5" ng-model="cvebuc"ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.page13.tipo_diferencial}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. 
+				</span>				
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
+VALOR DIF.&nbsp;&nbsp;&nbsp;
+<input  type="text" size="10" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" 
+	ng-minlength="8" ng-maxlength="8" required placeholder=" {{objeto.page13.valor_dif}} "  /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>				
+	
+	
+	<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+PLAZO&nbsp;&nbsp;&nbsp;
+			<input size="5" type="text"  ng-model="greeting"  placeholder=" {{objeto.page13.plazo}} " />
+			
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PER.
+<input type="text" size="5" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.page13.per}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. 
+				</span>	
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
+RENTA ANTICIPADA&nbsp;&nbsp;&nbsp;
+		<input  type="text" size="5" ng-model="cvebuc"	ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.page13.renta_anticipada}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TIPO DE PAGO&nbsp;&nbsp;&nbsp;
+		<input  type="text" size="5" ng-model="cvebuc"	ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.page13.tipo_pago}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				
+TASA CURVA&nbsp;&nbsp;&nbsp;
+				<input type="text" size="5" ng-model="cvebuc"	ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.page13.tasa_curva}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>
+	
+	<br/><br/>
+	
+	
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	FACT. INT. &nbsp;&nbsp;&nbsp;
+	<input type="text" placeholder=" {{objeto.page13.fact_int}} " />
+
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	NÚMERO DE RENTAS EN DEPÓSITO&nbsp;&nbsp;&nbsp;
+	<input type="text" placeholder=" {{objeto.page13.num_rentas_deposito}} " />
+
+	
+	&nbsp;&nbsp;&nbsp;
+	MONTO&nbsp;&nbsp;&nbsp;
+	<input type="text" size="30" placeholder=" {{objeto.page13.monto}} " />
+
+<br/>
+<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	TIPO DE RESIDUAL&nbsp;&nbsp;&nbsp;
+	<input type="text"  placeholder=" {{objeto.page13.tipo_residual}} " />
+
+	&nbsp;&nbsp;&nbsp;
+	PORCENTAJE&nbsp;&nbsp;&nbsp;
+	<input type="text"  size="30"  placeholder=" {{objeto.page13.porcentaje}} " />
+
+&nbsp;&nbsp;&nbsp;
+	MONTO RESIDUAL&nbsp;&nbsp;&nbsp;
+	<input type="text"  size="30"  placeholder=" {{objeto.page13.monto_residual}} " />
+			
+			<br /> <br /> 
+			
+			
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	IVCOMAPE&nbsp;&nbsp;&nbsp;
+	<input type="text"  size="15" placeholder=" {{objeto.page13.ivcomape}} " />
+
+	&nbsp;&nbsp;&nbsp;
+	COMISIÓN APERTURA&nbsp;&nbsp;&nbsp;
+	<input type="text"  size="15" placeholder=" {{objeto.page13.comision_apertura}} " />
+
+&nbsp;&nbsp;&nbsp;
+	MONTO COMISIÓN APERTURA&nbsp;&nbsp;&nbsp;
+	<input type="text" size="15" placeholder=" {{objeto.page13.monto_comis_aper1}} " />
+	<input type="text" size="5" placeholder=" {{objeto.page13.monto_comis_aper2}} " />
+			
+			<br /> <br /> 
+			
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+		ENGANCHE&nbsp;&nbsp;&nbsp;
+	<input type="text" size="30" placeholder=" {{objeto.page13.enganchePORCENTAJE}} " />%
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	ENGANCHE &nbsp;&nbsp;&nbsp; $
+	<input type="text" size="30" placeholder=" {{objeto.page13.enganchePESOS}} " />
+			
+			<br /> <br /> 
+			
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			
+	
+	MONTO FINANCIADO&nbsp;&nbsp;&nbsp;
+	<input type="text" size="30"  placeholder=" {{objeto.page13.monto_financiado}} " />
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	SEGURO&nbsp;&nbsp;&nbsp;
+	<input type="text"  size="30" placeholder=" {{objeto.page13.seguro1}} " />
+	<input type="text" size="3" placeholder=" {{objeto.page13.seguro2}} " />
+	<input type="text" size="3" placeholder=" {{objeto.page13.seguro3}} " />
+			
+			<br /> <br /> 			
+</div>
+
+	<br />
+	<div align="center">
+		<button type="button" id="F1" title=""
+			name="btnF1" value=" ">CÁLCULOS</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" id="F2" title="Tool tip text" name="btnF2"
+			value=" ">CONDICIONES/PERIODO</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" id="F4" title="" name="btnF2"
+			value=" ">CONCEPTOS</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" id="F5" title=""
+			name="btnF5" value=" ">CONDICIONES</button>			
+	</div>
+
+</form>
+
+
+</body>
+</html>

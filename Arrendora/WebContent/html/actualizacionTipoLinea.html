@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>ACTUALIZACIÓN TIPO LÍNEA</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/actualizacionTipoLineaJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+
+</script>
+
+
+<form action="">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerActTipoLinea">
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="buc" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.actTipoLinea.linea1A}} " />
+<input name="buc" type="text" ng-model="loc"  size="80"   placeholder=" {{objeto.actTipoLinea.linea1B}} " />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="buc" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.actTipoLinea.linea2A}} " />
+<input name="buc" type="text" ng-model="loc"  size="80"   placeholder=" {{objeto.actTipoLinea.linea2B}} " />
+
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="buc" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.actTipoLinea.linea3A}} " />
+<input name="buc" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.actTipoLinea.linea3B}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="buc" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.actTipoLinea.linea4A}} "  />
+<input name="" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.actTipoLinea.linea4B}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="buc" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.actTipoLinea.linea5A}} "  />
+<input name="buc" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.actTipoLinea.linea5B}} "  />
+
+</div>
+
+
+<br/>
+<br/>
+
+</div>
+
+</form>
+
+
+
+
+<br/>
+<br/>
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">ACTUALIZAR</button>
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">SALIR</button>
+</div>
+
+
+</body>
+</html>

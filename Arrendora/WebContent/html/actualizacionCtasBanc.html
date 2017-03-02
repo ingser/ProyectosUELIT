@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>ACTUALIZACIÓN DE CUENTAS BANCARIAS</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/actualizacionCtasBancJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+	var date = new Date();
+	var d  = date.getDate();
+	var day = (d < 10) ? '0' + d : d;
+	var m = date.getMonth() + 1;
+	var month = (m < 10) ? '0' + m : m;
+	var yy = date.getYear();
+	var year = (yy < 1000) ? yy + 1900 : yy;
+	var fecha = day + "/" + month + "/" + year;
+</script>
+
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTUALIZACIÓN DE CUENTAS BANCARIAS
+
+
+</div>	
+
+
+
+
+
+
+<form action="" name="CuentasBancarias">
+
+<br/>
+<br/>
+
+<div ng-controller="myController" align="left">
+
+<div ng-controller="myControllerCuenta">
+
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLIENTE&nbsp;&nbsp;&nbsp;
+<input name="cve_cte" type="text" ng-model="edoCte" size="5" placeholder=" {{objeto.cuenta.cve_cte}} " />
+<input name="cta_cte" type="text" ng-model="edoCte" size="60" placeholder=" {{objeto.cuenta.cliente}} " />
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE MONEDA&nbsp;&nbsp;&nbsp;
+<input name="cve_moneda" type="text" ng-model="edoCte" size="5" placeholder=" {{objeto.cuenta.cve_moneda}} " />
+<input name="moneda" type="text" ng-model="edoCte" size="30" placeholder=" {{objeto.cuenta.moneda}} " />
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE BANCO&nbsp;&nbsp;&nbsp;
+<input name="cve_bco" type="text" ng-model="edoCte" size="10" placeholder=" {{objeto.cuenta.cve_banco}} " />
+&nbsp;&nbsp;&nbsp;
+<input name="banco" type="text" ng-model="edoCte" size="40" placeholder=" {{objeto.cuenta.banco}} " />
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PLAZA&nbsp;&nbsp;&nbsp;
+<input name="plaza" type="text" size="20" ng-model="ctes" placeholder=" {{objeto.cuenta.plaza}} " />
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CUENTA&nbsp;&nbsp;&nbsp;
+<input name="cuenta" type="text" size="20" ng-model="ctes" placeholder=" {{objeto.cuenta.cuenta}} " />
+
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PRIORIDAD&nbsp;&nbsp;&nbsp;
+<input name="prioridad" type="text" size="20" ng-model="ctes" placeholder=" {{objeto.cuenta.prioridad}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TIPO DE MOVIMIENTO&nbsp;&nbsp;&nbsp;
+<input name="cve_mov" type="text" ng-model="edoCte" size="5" placeholder=" {{objeto.cuenta.cve_mov}} " />
+<input name="tipo_mov" type="text" ng-model="edoCte" size="10" placeholder=" {{objeto.cuenta.tipo_mov}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+AUTORIZA&nbsp;&nbsp;&nbsp;
+<input name="cve_aut_1" type="text" ng-model="edoCte" size="5" placeholder=" {{objeto.cuenta.cve_autoriza_1}} " />
+<input name="cve_aut_2" type="text" ng-model="edoCte" size="15" placeholder=" {{objeto.cuenta.cve_autoriza_2}} " />
+
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA CARTA&nbsp;&nbsp;&nbsp;
+<input id="dt1" name="fecha_carta" type="text" size="20" ng-model="ctes"  placeholder=" {{objeto.cuenta.fecha_carta}} " />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+REFERENCIA CARTA&nbsp;&nbsp;&nbsp;
+<input name="ref_carta" type="text" ng-model="edoCte" size="15" placeholder=" {{objeto.cuenta.referencia_carta}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SECUENCIA&nbsp;&nbsp;&nbsp;
+<input name="secuencia" type="text" ng-model="edoCte" size="15" placeholder=" {{objeto.cuenta.secuencia}} " />
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA ENTREGA DOCUMENTO&nbsp;&nbsp;&nbsp;
+<input name="fecha_entrega" id="dt" type="text" size="20" ng-model="ctes"  placeholder=" {{objeto.cuenta.fecha_entrega}} " />
+
+
+
+
+<br/>
+<br/>
+
+</div>
+
+</div>
+
+</form>
+
+
+
+
+
+
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="TOOL TIP" name="btnF1" value=" ">ACTUALIZAR</button>
+</div>
+
+
+</body>
+</html>

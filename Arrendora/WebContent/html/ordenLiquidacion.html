@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>AUTORIZACIÓN DE ORDEN DE LIQUIDACIÓN</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/ordenLiquidacionJS.js"></script>
+
+</head>
+
+<body>
+
+	
+	
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+<br/>
+<br/>
+</div>	
+
+
+
+<form action="" name="AutOrdenLiq">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerOrdenLiquidacion">
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ORDEN DE LIQUIDACIÓN
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	DESTINO&nbsp;&nbsp;
+	<input name="destino" type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.ordenLiquidacion.destino}} " />
+
+
+	<br />
+	<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE CLIENTE&nbsp;&nbsp;
+<input name="cveCte" type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.ordenLiquidacion.cve_cliente}} " /> 
+<input name="cliente" type="text" ng-model="greeting" size="90"  placeholder=" {{objeto.ordenLiquidacion.cliente}} " />
+<br />
+<br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE EMPRESA&nbsp;&nbsp;
+<input name="cveEmpr" type="text" size="5" ng-model="ctes" placeholder=" {{objeto.ordenLiquidacion.cve_empresa}} "  /> 
+<input name="empresa" type="text" ng-model="greeting" size="90"  placeholder=" {{objeto.ordenLiquidacion.empresa}} " />
+<br />
+<br />				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CLAVE PROMOTOR&nbsp;&nbsp;
+<input name="cveProm" type="text" size="5" ng-model="ctes" placeholder=" {{objeto.ordenLiquidacion.cve_promotor}} "  /> 
+<input name="prom" type="text" ng-model="greeting" size="90"  placeholder=" {{objeto.ordenLiquidacion.promotor}} " />
+<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				
+CLAVE BIEN C.N.B.&nbsp;&nbsp;
+<input name="cveBienCNBYV" type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.ordenLiquidacion.cve_bien_CNB}} " /> 
+<input name="nienCNBYV" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.ordenLiquidacion.bien_CNB}} " /> 
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				No. COTIZACIÓN&nbsp;&nbsp; 
+				<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.ordenLiquidacion.num_cotiza}} " />
+<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				
+CLAVE BIEN INT&nbsp;&nbsp;
+<input name="cveBienInterb" type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.ordenLiquidacion.cve_bien_interbanc}} " /> 
+<input name="bienInterb" type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.ordenLiquidacion.bien_interbanc}} " /> 				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				LEASEBACK&nbsp;&nbsp;
+			<input name="leaseback" type="text" size="3" ng-model="ctes"  placeholder=" {{objeto.ordenLiquidacion.leaseback}} " />				 
+				
+				<br /> <br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+FACTOR DE IVA&nbsp;&nbsp;&nbsp;
+<input name="facIVA" type="text" ng-model="edoCte" size="5" placeholder="1" value=""  placeholder=" {{objeto.ordenLiquidacion.fact_IVA}} " /> 
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+IVA ARRENDAMIENTO
+<input name="ivaArrend" type="text" size="30" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.ordenLiquidacion.iva_arrendam}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>				
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TIPO ARRENDAMIENTO&nbsp;&nbsp;&nbsp;
+<input name="tipArren" size="3" type="text" ng-model="greeting"  placeholder=" {{objeto.ordenLiquidacion.tipo_arrendam}} " />
+			
+			<br /> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			
+				PLAZO&nbsp;&nbsp;&nbsp;
+<input name="plazo" type="text" size="5" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.ordenLiquidacion.plazo}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>				
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
+				MONTO A FINANCIAR&nbsp;&nbsp;&nbsp;
+<input name="monFinanc" type="text" size="30" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.ordenLiquidacion.monto_financ}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>				
+	
+	<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+	FACTURA(S):
+	
+	<br/><br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			MONEDA&nbsp;&nbsp;&nbsp;
+<input name="cveMon" size="3" type="text"  placeholder="01" ng-model="greeting"  placeholder=" {{objeto.ordenLiquidacion.cve_moneda}} " />
+<input name="moneda" type="text" ng-model="edoCte" size="30" placeholder="MXN PESOS"  placeholder=" {{objeto.ordenLiquidacion.moneda}} " /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				TIPO DE CAMBIO
+<input name="tipCamb" type="text" size="30" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.ordenLiquidacion.tipo_cambio}} "  /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>	
+	
+	<br />
+	<br /> 
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+	MONTO DE BIEN(ES)&nbsp;&nbsp;&nbsp;
+<input name="montBienes" type="text" size="30" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.ordenLiquidacion.monto_bienes}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+IVA&nbsp;&nbsp;&nbsp;
+<input name="iva" type="text" size="5" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.ordenLiquidacion.iva}} "  /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				
+MONTO IVA&nbsp;&nbsp;&nbsp;
+<input name="montIVA" type="text" size="30" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.ordenLiquidacion.monto_iva}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es
+				requerido a 8 posiciones. </span>
+	
+	<br/><br/>
+	
+	
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+	FECHA ARRENDAMIENTO&nbsp;&nbsp;&nbsp;
+	<input type=date id=dt placeholder=" {{objeto.ordenLiquidacion.fecha_arrendam}} " />
+
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	FECHA PAGO&nbsp;&nbsp;&nbsp;
+	<input type=date id=dt placeholder=" {{objeto.ordenLiquidacion.fecha_pago}} " />
+
+
+	<br/><br/>
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+	OPCIÓN DE COMPRA&nbsp;&nbsp;&nbsp;
+	<input name="opcComp" type=text id=dt size="3" placeholder=" {{objeto.ordenLiquidacion.opcion_compra}} " />%
+
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	MONTO OPCIÓN DE COMPRA&nbsp;&nbsp;&nbsp;
+	<input name="montoOpcCom" type=text id=dt placeholder=" {{objeto.ordenLiquidacion.monto_opc_compra}} " />
+
+	<br />
+	<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+	CRÉDITO ORIGEN&nbsp;&nbsp;&nbsp;
+	<input name="credOrig" type=text id=dt size="30" placeholder=" {{objeto.ordenLiquidacion.credito_origen}} " />
+
+</div>
+			
+			<br /> <br /> 
+			
+</div>
+
+</form>
+			
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br />
+	<div align="center">
+		<button type="button" id="F1" title=""
+			name="btnF1" value=" ">TOTALES</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" id="F2" title="Tool tip text" name="btnF2"
+			value=" ">ESP. PAGO</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" id="F4" title="" name="btnF2"
+			value=" ">ANTI</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" id="F5" title=""
+			name="btnF5" value=" ">FACTURAS</button>			
+	</div>
+
+
+
+</body>
+</html>

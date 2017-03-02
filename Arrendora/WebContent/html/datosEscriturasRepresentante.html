@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>REPRESENTANTES DE CLIENTE</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/datosEscrituraRepresentanteJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+
+</script>
+
+<form action="" name="DatosEscrRepresentCte">
+
+
+<div ng-controller="myControllerDatosEscrRepresentCte" align="left">
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FACULTADES&nbsp;&nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="70"  placeholder=" {{objeto.datosEscrRepresentCte.facultades}} " />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. DE ESCRITURA&nbsp;&nbsp;&nbsp;
+<input name="buc" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.datosEscrRepresentCte.num_escritura}} "  />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA DE ESCRITURA&nbsp;&nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.datosEscrRepresentCte.fecha_escritura}} " />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+No. DE NOTARIO&nbsp;&nbsp;&nbsp;
+<input name="buc" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.datosEscrRepresentCte.num_notario}} "  />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NOMBRE NOTARIO&nbsp;&nbsp;&nbsp;
+<input name="buc" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.datosEscrRepresentCte.nom_notario}} "  />
+
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LUGAR DE NOTARIO&nbsp;&nbsp;&nbsp;
+<input name="buc" type="text" ng-model="loc"  size="60"  placeholder=" {{objeto.datosEscrRepresentCte.lugar_notario}} "  />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+REGISTRO PÚBLICO&nbsp;&nbsp;&nbsp;
+<input name="buc" type="text" ng-model="loc"  size="60"  placeholder=" {{objeto.datosEscrRepresentCte.reg_publico}} "  />
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LUGAR REGISTRO&nbsp;&nbsp;&nbsp;
+<input name="buc" type="text" ng-model="loc"  size="60"  placeholder=" {{objeto.datosEscrRepresentCte.lugar_registro}} "  />
+
+
+</div>
+
+</form>
+
+
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">COPIAR DATOS DE REPRESENTANTES A OTRO CLIENTE</button>
+</div>
+
+
+
+
+</body>
+</html>

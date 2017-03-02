@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>CONCEPTOS</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/conceptosJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+
+</script>
+
+
+
+<br/>
+<br/>
+
+
+
+<div>
+
+<form action="" name="Conceptos">
+
+
+<div ng-controller="myController" align="center">
+
+<br/>
+<br/>
+
+<div ng-controller=myControllerConceptos>
+
+
+	
+	CVE.
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	CONCEPTO
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	MONTO
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	MONTO COBRADO
+
+
+	<table>	
+		
+		<tr>
+			<td><input type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.conceptos.cve1A}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.conceptos.cve1B}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.conceptos.concepto1}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.monto1}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.montoCobrado1}} "  /></td>
+		</tr>
+
+
+		<tr>
+			<td><input type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.conceptos.cve2A}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.conceptos.cve2B}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.conceptos.concepto2}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.monto2}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.montoCobrado2}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td><input type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.conceptos.cve3A}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.conceptos.cve3B}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.conceptos.concepto3}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.monto3}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.montoCobrado3}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td><input type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.conceptos.cve4A}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.conceptos.cve4B}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.conceptos.concepto4}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.monto4}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.montoCobrado4}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td><input type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.conceptos.cve5A}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.conceptos.cve5B}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.conceptos.concepto5}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.monto5}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.montoCobrado5}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td><input type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.conceptos.cve6A}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.conceptos.cve6B}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.conceptos.concepto6}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.monto6}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.montoCobrado6}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td><input type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.conceptos.cve7A}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.conceptos.cve7B}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.conceptos.concepto7}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.monto7}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.montoCobrado7}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td><input type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.conceptos.cve8A}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.conceptos.cve8B}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.conceptos.concepto8}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.monto8}} "  /></td>
+			<td><input type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.conceptos.montoCobrado8}} "  /></td>
+		</tr>												
+		
+						
+	</table>
+	
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">CONVERSIÓN DE MONEDA</button>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain"> 
+<head>
+<meta charset="ISO-8859-1">
+<title>BIENES DISPONIBLES PARA ESTA COTIZACIÓN</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/bienesDisponiblesCotizacionJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+	var date = new Date();
+	var d  = date.getDate();
+	var day = (d < 10) ? '0' + d : d;
+	var m = date.getMonth() + 1;
+	var month = (m < 10) ? '0' + m : m;
+	var yy = date.getYear();
+	var year = (yy < 1000) ? yy + 1900 : yy;
+	var fecha = day + "/" + month + "/" + year;
+</script>
+
+<form action="" name="bienesDispCot">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerBienesDispCot">
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<label>BIENES DISPONIBLES PARA ESTA COTIZACIÓN</label>
+
+
+<br/>
+<br/>
+
+
+
+
+<div align="center">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SELECCIONE EL TIPO DE BIEN Y
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">PRESIONE PARA DATOS COMPLEMENTARIOS</button>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+BIEN
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FACTURA
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bien1" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.bienesDispCot.bien1}} " />
+<input name="fac1" type="text" ng-model="loc"  size="20"   placeholder=" {{objeto.bienesDispCot.factura1}} " />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bien2" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.bienesDispCot.bien2}} " />
+<input name="fac2" type="text" ng-model="loc"  size="20"  placeholder=" {{objeto.bienesDispCot.factura2}} "  />
+
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bien3" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.bienesDispCot.bien3}} " />
+<input name="fac3" type="text" ng-model="loc"  size="20"  placeholder=" {{objeto.bienesDispCot.factura3}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bien4" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.bienesDispCot.bien4}} "  />
+<input name="fac4" type="text" ng-model="loc"  size="20"   placeholder=" {{objeto.bienesDispCot.factura4}} " />
+
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+BIEN
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+REN.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+DESCRIPCIÓN
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bienA" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.bienesDispCot.bienA}} " />
+<input name="renA" type="text" ng-model="loc"  size="2"   placeholder=" {{objeto.bienesDispCot.renA}} " />
+<input name="desA" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.bienesDispCot.descripA}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bienB" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.bienesDispCot.bienB}} "  />
+<input name="renB" type="text" ng-model="loc"  size="2"  placeholder=" {{objeto.bienesDispCot.renB}} "  />
+<input name="desB" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.bienesDispCot.descripB}} "  />
+
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bienC" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.bienesDispCot.bienC}} " />
+<input name="renC" type="text" ng-model="loc"  size="2"   placeholder=" {{objeto.bienesDispCot.renC}} " />
+<input name="desC" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.bienesDispCot.descripC}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bienD" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.bienesDispCot.bienD}} "  />
+<input name="renD" type="text" ng-model="loc"  size="2"  placeholder=" {{objeto.bienesDispCot.renD}} "  />
+<input name="desD" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.bienesDispCot.descripD}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bienE" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.bienesDispCot.bienE}} "  />
+<input name="renE" type="text" ng-model="loc"  size="2"  placeholder=" {{objeto.bienesDispCot.renE}} "  />
+<input name="desE" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.bienesDispCot.descripE}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bienF" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.bienesDispCot.bienF}} "  />
+<input name="renF" type="text" ng-model="loc"  size="2"  placeholder=" {{objeto.bienesDispCot.renF}} "  />
+<input name="desF" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.bienesDispCot.descripF}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bienG" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.bienesDispCot.bienG}} "  />
+<input name="renG" type="text" ng-model="loc"  size="2"  placeholder=" {{objeto.bienesDispCot.renG}} "  />
+<input name="desG" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.bienesDispCot.descripG}} "  />
+
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bienH" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.bienesDispCot.bienH}} "  />
+<input name="renH" type="text" ng-model="loc"  size="2"  placeholder=" {{objeto.bienesDispCot.renH}} "  />
+<input name="desH" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.bienesDispCot.descripH}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bienI" type="text" ng-model="loc"  size="5"   placeholder=" {{objeto.bienesDispCot.bienI}} " />
+<input name="renI" type="text" ng-model="loc"  size="2"   placeholder=" {{objeto.bienesDispCot.renI}} " />
+<input name="desI" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.bienesDispCot.descripI}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bienJ" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.bienesDispCot.bienJ}} "  />
+<input name="renJ" type="text" ng-model="loc"  size="2"  placeholder=" {{objeto.bienesDispCot.renJ}} "  />
+<input name="desJ" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.bienesDispCot.descripJ}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bienK" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.bienesDispCot.bienK}} "  />
+<input name="renK" type="text" ng-model="loc"  size="2"  placeholder=" {{objeto.bienesDispCot.renK}} "  />
+<input name="desK" type="text" ng-model="loc"  size="80"   placeholder=" {{objeto.bienesDispCot.descripK}} " />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="bienL" type="text" ng-model="loc"  size="5"  placeholder=" {{objeto.bienesDispCot.bienL}} "  />
+<input name="renL" type="text" ng-model="loc"  size="2"  placeholder=" {{objeto.bienesDispCot.renL}} "  />
+<input name="desL" type="text" ng-model="loc"  size="80"  placeholder=" {{objeto.bienesDispCot.descripL}} "  />
+
+
+
+</div>
+
+</div>
+
+</form>
+
+
+
+
+</body>
+</html>

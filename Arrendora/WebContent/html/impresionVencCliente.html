@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain"> 
+<head>
+<meta charset="ISO-8859-1">
+<title>IMPRESIÓN AVISO VENCIMIENTO POR CLIENTE</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/impresionVencClienteJS.js"></script>
+
+</head>
+
+<body>
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+
+<br/>
+<br/>
+
+</div>
+
+<form action="" name="ImprVencCliente">
+
+
+<div ng-controller="myController" align="center">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerImpresVencCte">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<label>T0000027</label>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<label>IMPRESIÓN AVISO VENCIMIENTO POR CLIENTE</label>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+PARÁMETROS
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+VALOR
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="param1" type="text" ng-model="loc"  size="50"  placeholder=" {{objeto.impresVencCte.param1}} "  />
+<input name="val1" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.impresVencCte.valo1}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="param2" type="text" ng-model="loc"  size="50"  placeholder=" {{objeto.impresVencCte.param2}} "  />
+<input name="val2" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.impresVencCte.valor2}} "  />
+
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="param3" type="text" ng-model="loc"  size="50"  placeholder=" {{objeto.impresVencCte.param3}} "  />
+<input name="val3" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.impresVencCte.valor3}} "  />
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="param4" type="text" ng-model="loc"  size="50"  placeholder=" {{objeto.impresVencCte.param4}} "  />
+<input name="val4" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.impresVencCte.valor4}} "  />
+
+
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="param5" type="text" ng-model="loc"  size="50"  placeholder=" {{objeto.impresVencCte.param5}} "  />
+<input name="val5" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.impresVencCte.valor5}} "  />
+
+
+
+<br/>
+<br/>
+
+<br/>
+<br/>
+
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">IMPRIMIR CUALQUIER REPORTE</button>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+</form>
+
+</body>
+</html>

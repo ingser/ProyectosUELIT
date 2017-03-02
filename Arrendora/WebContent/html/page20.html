@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>PAGE_20</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/page20JS.js"></script>
+
+</head>
+
+<body>
+
+<form action="" name="page20">
+
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerPagina20" align="left">
+
+
+<table style="width: 100%;">
+
+	<tr align="left">
+		<td>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label>CONCEPTO</label> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			
+			<label>MONTO</label> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;
+			&nbsp;			
+			<label>F</label>			
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<input type="text" size="10" ng-model="renta1" placeholder=" {{ objeto.pagina20.num_concepto1 }}" />  
+			<input type="text" ng-model="greeting" size="20"  placeholder=" {{ objeto.pagina20.concepto1 }}" />
+			<input type="text" size="15" ng-model="ctes"  placeholder=" {{ objeto.pagina20.num1 }}" /> 
+			<input type="text" ng-model="greeting" size="20"  placeholder=" {{ objeto.pagina20.monto1 }}" />
+			<input type="text" ng-model="greeting" size="5"  placeholder=" {{objeto.pagina20.f1}}" />			
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<input type="text" size="10" ng-model="ctes"  placeholder=" {{ objeto.pagina20.num_concepto2 }}"/> 
+			<input type="text" ng-model="greeting" size="20"  placeholder=" {{ objeto.pagina20.concepto2 }}" />
+			<input type="text" size="15" ng-model="ctes"  placeholder=" {{ objeto.pagina20.num2 }}" /> 
+			<input type="text" ng-model="greeting" size="20"  placeholder=" {{ objeto.pagina20.monto2 }}" />		
+			<input type="text" ng-model="greeting" size="5"  placeholder="{{ objeto.pagina20.f2}}" />	
+		</td>
+	</tr>
+	
+					
+
+</table>
+
+
+	</div>
+
+	
+	</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>DATOS COMPLEMENTARIOS AVAL FISICO</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/datosComplementariosAvalFisicoJS.js"></script>
+
+</head>
+
+<body>
+
+
+
+<form action="" name="DatosComplAvalFisico">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerDatosComplAvalFisico">
+
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LUGAR NACIMIENTO&nbsp;&nbsp;&nbsp;
+<input name="lugNac" type="text" ng-model="loc"  size="60"  placeholder=" {{objeto.datosComplAvalFisico.lugar_nacimiento}} "   />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ENTIDAD.&nbsp;&nbsp;&nbsp;
+<input name="cveEnt" type="text" ng-model="loc"  size="10"  placeholder=" {{objeto.datosComplAvalFisico.cve_entidad}} "  />
+<input name="entidad" type="text" ng-model="loc"  size="60"   placeholder=" {{objeto.datosComplAvalFisico.entidad}} " />
+
+<br/>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ESTADO CIVIL&nbsp;&nbsp;&nbsp;
+<input name="edoCiv" type="text" ng-model="loc"  size="40"  placeholder=" {{objeto.datosComplAvalFisico.estado_civil}} "  />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PROFESIÓN&nbsp;&nbsp;&nbsp;
+<input name="prof" type="text" ng-model="loc"  size="50"  placeholder=" {{objeto.datosComplAvalFisico.profesion}} "  />
+
+
+</div>
+
+
+<br/>
+<br/>
+
+</div>
+
+</form>
+
+
+
+
+<br/>
+<br/>
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">SALIR</button>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>ASIGNACIÓN DE FACTURAS</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/asignacionFacturasJS.js"></script>
+
+</head>
+
+<body>
+
+<br/>
+
+<form action="">
+
+
+
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerAsignacionFacturas" align="left">
+
+
+<table style="width: 100%;">
+
+	<tr align="left">
+		<td>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label>FACTURA</label> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label>CVE. PROD.</label> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			
+			<label>NOMBRE PROVEEDOR</label> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label>MONTO SIN IVA</label>			
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<input name="ren1" type="text" size="2" ng-model="renta1" />  
+			<input name="fact1" type="text" ng-model="greeting" size="20"  placeholder=" {{ objeto.asignacionFacturas.fact1 }}" />
+			<input name="cveProd1" type="text" size="15" ng-model="ctes"  placeholder=" {{ objeto.asignacionFacturas.cveProd1 }}" /> 
+			<input name="nomProv1" type="text" ng-model="greeting" size="40"  placeholder=" {{ objeto.asignacionFacturas.nomProv1 }}" />
+			<input name="monSinIVA1" type="text" ng-model="greeting" size="15"    placeholder=" {{ objeto.asignacionFacturas.montoSinIVA1 }}" />			
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<input name="ren1" type="text" size="2" ng-model="ctes"  /> 
+			<input name="fact2" type="text" ng-model="greeting" size="20"  placeholder=" {{ objeto.asignacionFacturas.fact2 }}" />
+			<input name="cveProd2" type="text" size="15" ng-model="ctes"  placeholder=" {{ objeto.asignacionFacturas.cveProd2 }}" /> 
+			<input name="nomProv2" type="text" ng-model="greeting" size="40"  placeholder=" {{ objeto.asignacionFacturas.nomProv2 }}" />		
+			<input name="monSinIVA2" type="text" ng-model="greeting" size="15"  placeholder=" {{ objeto.asignacionFacturas.montoSinIVA2 }}" />	
+		</td>
+	</tr>
+	
+<tr>
+		<td>
+			<input name="ren1" type="text" size="2" ng-model="ctes" /> 
+			<input name="fact3" type="text" ng-model="greeting" size="20"  placeholder=" {{ objeto.asignacionFacturas.fact3 }}" />
+			<input name="cveProd3" type="text" size="15" ng-model="ctes"  placeholder=" {{ objeto.asignacionFacturas.cveProd3 }}" /> 
+			<input name="nomProv3" type="text" ng-model="greeting" size="40"  placeholder=" {{ objeto.asignacionFacturas.nomProv3 }}" />		
+			<input name="monSinIVA3" type="text" ng-model="greeting" size="15"  placeholder=" {{ objeto.asignacionFacturas.montoSinIVA3 }}" />	
+		</td>
+	</tr>	
+	
+					
+
+</table>
+
+
+	</div>
+	
+	</form>
+	
+
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">ESPECIFICAR BIENES</button>
+	<input type="text" ng-model="greeting" size="15"  placeholder="8,513,418.40" />
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>ALTA DE LÍNEAS DE CRÉDITO</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/altaLineaCreditoJS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+
+</script>
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TESORERÍA
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ALTA DE LÍNEAS DE CRÉDITO
+</div>
+
+
+<form action="" name="LineaCredito">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerLineaCredito">
+
+
+&nbsp;&nbsp;&nbsp;
+CLAVE CLIENTE&nbsp;&nbsp;
+<input name="cve_cte1" type="text" size="20" ng-model="ctes"  placeholder=" {{objeto.lineaCredito.cve_cte1}} " />
+&nbsp;&nbsp;&nbsp;
+<input name="cve_cte2" type="text" ng-model="greeting" size="50"  placeholder=" {{objeto.lineaCredito.cve_cte2}} "  />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="cve_cte3" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required  placeholder=" {{objeto.lineaCredito.cve_cte3}} " />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	La clave numérica BUC es requerida a 8 posiciones.
+</span>
+
+
+
+
+<br/><br/>
+&nbsp;&nbsp;&nbsp;RESOLUCIÓN&nbsp;&nbsp;&nbsp;
+<input name="resol" type="text" ng-model="greeting"  placeholder=" {{objeto.lineaCredito.resolucion}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+STATUS&nbsp;&nbsp;&nbsp;
+<input name="status" type="text" ng-model="edoCte" size="5"  placeholder=" {{objeto.lineaCredito.status}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ASEGURA&nbsp;&nbsp;&nbsp;
+<input name="asegura" type="text" ng-model="edoCte" size="5"  placeholder=" {{objeto.lineaCredito.asegura}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MONTO&nbsp;&nbsp;&nbsp;
+<input name="monto" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required  placeholder=" {{objeto.lineaCredito.monto}} " />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	MONTO es requerido a 8 posiciones.
+</span>
+
+<br/><br/>
+&nbsp;&nbsp;&nbsp;TOTAL AUTORIZADO&nbsp;&nbsp;&nbsp;
+<input name="tot_autor" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required  placeholder=" {{objeto.lineaCredito.tot_autorizado}} " />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	TOTAL AUTORIZADO es requerido a 8 posiciones.
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TOTAL DISPUESTO&nbsp;&nbsp;&nbsp;
+<input name="tot_disp" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required  placeholder=" {{objeto.lineaCredito.tot_dispuesto}} " />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	TOTAL DISPUESTO es requerido a 8 posiciones.
+</span>
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;FECHA AUTO.&nbsp;&nbsp;&nbsp;
+<input name="fec_aut" type=date id=dt  placeholder=" {{objeto.lineaCredito.fecha_aut}} " >
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA VEN.&nbsp;&nbsp;&nbsp;
+<input name="fec_ven" type=date id=dt  placeholder=" {{objeto.lineaCredito.fecha_ven}} " >
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FECHA VEN.&nbsp;&nbsp;&nbsp;
+<input name="fec_ven_2" type=date id=dt  placeholder=" {{objeto.lineaCredito.fecha_ven2}} " >
+
+<br/>
+<br/>
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;CLAVE LÍNEA&nbsp;&nbsp;
+<input name="cve_lin1" type="text" size="20" ng-model="ctes"  placeholder=" {{objeto.lineaCredito.cve_linea1}} " />
+&nbsp;&nbsp;&nbsp;
+<input name="cve_lin2" type="text" ng-model="greeting" size="50"  placeholder=" {{objeto.lineaCredito.cve_linea2}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;CLAVE AUTO.&nbsp;&nbsp;
+<input name="cve_auto1" type="text" size="20" ng-model="ctes"  placeholder=" {{objeto.lineaCredito.cve_auto1}} " />
+&nbsp;&nbsp;&nbsp;
+<input name="cve_auto2" type="text" ng-model="greeting" size="50"  placeholder=" {{objeto.lineaCredito.cve_auto2}} " />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="cve_auto3" type="text" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8" required  placeholder=" {{objeto.lineaCredito.cve_auto3}} " />
+ <span style="color: red;" ng-show = "index.buc.$touched && index.buc.$invalid">
+	La clave numérica BUC es requerida a 8 posiciones.
+</span>
+
+<br/>
+<br/>
+
+<br/>
+<br/>
+
+
+<div ng-controller="myControllerLineaCredito">
+
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;NÚM.</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>GAR.</td>
+			<td></td>
+			<td></td>
+			<td></td>			
+			<td>DESCRIPCIÓN</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>OBSERVACIONES</td>			
+		</tr>	
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;<input name="num1" type="text" ng-model="num1" size="10"  placeholder=" {{objeto.lineaCredito.num1}} "  /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;<input name="gar1" type="text" ng-model="gar1" size="10"  placeholder=" {{objeto.lineaCredito.gar1}} "  /></td>
+			<td></td>
+			<td></td>
+			<td></td>			
+			<td>&nbsp;&nbsp;&nbsp;<input name="descr1" type="text" ng-model="desc1" size="50"  placeholder=" {{objeto.lineaCredito.descr1}} "  /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;<input name="observ1" type="text" ng-model="obser1" size="50"  placeholder=" {{objeto.lineaCredito.observ1}} "  /></td>			
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;<input name="num2" type="text" ng-model="num2" size="10"  placeholder=" {{objeto.lineaCredito.num2}} "  /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;<input name="gar2" type="text" ng-model="gar2" size="10"  placeholder=" {{objeto.lineaCredito.gar2}} "  /></td>
+			<td></td>
+			<td></td>
+			<td></td>			
+			<td>&nbsp;&nbsp;&nbsp;<input name="descr2" type="text" ng-model="desc2" size="50"  placeholder=" {{objeto.lineaCredito.descr2}} "  /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;<input name="observ2" type="text" ng-model="obser2" size="50"  placeholder=" {{objeto.lineaCredito.observ2}} "  /></td>	
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;<input name="num3" type="text" ng-model="num3" size="10"  placeholder=" {{objeto.lineaCredito.num3}} "  /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;<input name="gar3" type="text" ng-model="gar3" size="10"  placeholder=" {{objeto.lineaCredito.gar3}} "  /></td>
+			<td></td>
+			<td></td>
+			<td></td>			
+			<td>&nbsp;&nbsp;&nbsp;<input name="descr3" type="text" ng-model="desc3" size="50"  placeholder=" {{objeto.lineaCredito.descr3}} "  /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;<input name="observ3" type="text" ng-model="obser3" size="50"  placeholder=" {{objeto.lineaCredito.observ3}} "  /></td>	
+		</tr>
+		
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;<input name="num4" type="text" ng-model="num4" size="10"  placeholder=" {{objeto.lineaCredito.num4}} "  /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;<input name="gar4" type="text" ng-model="gar4" size="10"  placeholder=" {{objeto.lineaCredito.gar4}} "  /></td>
+			<td></td>
+			<td></td>
+			<td></td>			
+			<td>&nbsp;&nbsp;&nbsp;<input name="descr4" type="text" ng-model="desc4" size="50"  placeholder=" {{objeto.lineaCredito.descr4}} "  /></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;<input name="observ4" type="text" ng-model="obser4" size="50"  placeholder=" {{objeto.lineaCredito.observ4}} "  /></td>	
+		</tr>
+		
+		
+	</table>
+	
+</div>
+
+
+<br/>
+<br/>
+<br/>
+
+</div>
+
+</div>
+
+</form>
+
+
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Módulo Representantes y Avales" name="btnF1" value=" ">LIMPIAR</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F2" title="Módulo Accionistas" name="btnF2" value=" ">CONDICIONES ARRENDAMIENTO</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F3" title="Módulo Cuenta Cheques" name="btnF3" value=" ">ANTICIPOS</button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button  type="button" id="F3" title="Módulo Cuenta Cheques" name="btnF3" value=" ">GARANTÍAS</button>	
+</div>
+
+
+
+</body>
+</html>

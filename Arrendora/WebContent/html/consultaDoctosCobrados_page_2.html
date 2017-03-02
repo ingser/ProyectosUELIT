@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>PAGE_2</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/consultaDoctosCobrados_page2_JS.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getYear();
+var year = (yy < 1000) ? yy + 1900 : yy;
+//document.write(day + "/" + month + "/" + year);
+var fecha = day + "/" + month + "/" + year;
+//document.write(fecha);
+
+</script>
+
+
+<form action="">
+
+
+<div ng-controller="myController" align="center">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerConsDoctosCobrPG2">
+
+	
+	TRAN. COBRO
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	FECHA DOCUMENTO
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	FECHA COBRO
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	MONTO DOCTO.
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	MONTO COBRADO
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	TRAN. PAGO
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	ORIGEN
+	<table>	
+		
+		<tr>
+			<td><input name="tran1" type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.consDoctosCobrPG2.tran1}} "  /></td>
+			<td><input name="cobro1" type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.consDoctosCobrPG2.cobro1}} "  /></td>
+			<td><input name="fechDoc1" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.fechaDoc1}} "  /></td>
+			<td><input name="fecCob1" type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.consDoctosCobrPG2.fechaCobro1}} "  /></td>
+			<td><input name="monDoc1" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.montoDocto1}} "  /></td>
+			<td><input name="montoCobr1" type="text" ng-model="gra1" size="30"  placeholder=" {{objeto.consDoctosCobrPG2.montoCobrado1}} "  /></td>
+			<td><input name="tranPago1" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.tranPago1}} "  /></td>
+			<td><input name="origen1" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.origen1}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td><input name="tran2" type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.consDoctosCobrPG2.tran2}} "  /></td>
+			<td><input name="cobro2" type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.consDoctosCobrPG2.cobro2}} "  /></td>
+			<td><input name="fechDoc2" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.fechaDoc2}} "  /></td>
+			<td><input name="fecCob2" type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.consDoctosCobrPG2.fechaCobro2}} "  /></td>
+			<td><input name="monDoc2" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.montoDocto2}} "  /></td>
+			<td><input name="montoCobr2" type="text" ng-model="gra1" size="30"  placeholder=" {{objeto.consDoctosCobrPG2.montoCobrado2}} "  /></td>
+			<td><input name="tranPago2" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.tranPago2}} "  /></td>
+			<td><input name="origen2" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.origen2}} "  /></td>
+		</tr>
+
+		<tr>
+			<td><input name="tran3" type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.consDoctosCobrPG2.tran3}} "  /></td>
+			<td><input name="cobro3" type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.consDoctosCobrPG2.cobro3}} "  /></td>
+			<td><input name="fechDoc3" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.fechaDoc3}} "  /></td>
+			<td><input name="fecCob3" type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.consDoctosCobrPG2.fechaCobro3}} "  /></td>
+			<td><input name="monDoc3" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.montoDocto3}} "  /></td>
+			<td><input name="montoCobr3" type="text" ng-model="gra1" size="30"  placeholder=" {{objeto.consDoctosCobrPG2.montoCobrado3}} "  /></td>
+			<td><input name="tranPago3" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.tranPago3}} "  /></td>
+			<td><input name="origen3" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.origen3}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td><input name="tran4" type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.consDoctosCobrPG2.tran4}} "  /></td>
+			<td><input name="cobro4" type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.consDoctosCobrPG2.cobro4}} "  /></td>
+			<td><input name="fechDoc4" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.fechaDoc4}} "  /></td>
+			<td><input name="fecCob4" type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.consDoctosCobrPG2.fechaCobro4}} "  /></td>
+			<td><input name="monDoc4" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.montoDocto4}} "  /></td>
+			<td><input name="montoCobr4" type="text" ng-model="gra1" size="30"  placeholder=" {{objeto.consDoctosCobrPG2.montoCobrado4}} "  /></td>
+			<td><input name="tranPago4" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.tranPago4}} "  /></td>
+			<td><input name="origen4" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.origen4}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td><input name="tran5" type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.consDoctosCobrPG2.tran5}} "  /></td>
+			<td><input name="cobro5" type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.consDoctosCobrPG2.cobro5}} "  /></td>
+			<td><input name="fechDoc5" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.fechaDoc5}} "  /></td>
+			<td><input name="fecCob5" type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.consDoctosCobrPG2.fechaCobro5}} "  /></td>
+			<td><input name="monDoc5" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.montoDocto5}} "  /></td>
+			<td><input name="montoCobr5" type="text" ng-model="gra1" size="30"  placeholder=" {{objeto.consDoctosCobrPG2.montoCobrado5}} "  /></td>
+			<td><input name="tranPago5" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.tranPago5}} "  /></td>
+			<td><input name="origen5" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.origen5}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td><input name="tran6" type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.consDoctosCobrPG2.tran6}} "  /></td>
+			<td><input name="cobro6" type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.consDoctosCobrPG2.cobro6}} "  /></td>
+			<td><input name="fechDoc6" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.fechaDoc6}} "  /></td>
+			<td><input name="fecCob6" type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.consDoctosCobrPG2.fechaCobro6}} "  /></td>
+			<td><input name="monDoc6" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.montoDocto6}} "  /></td>
+			<td><input name="montoCobr6" type="text" ng-model="gra1" size="30"  placeholder=" {{objeto.consDoctosCobrPG2.montoCobrado6}} "  /></td>
+			<td><input name="tranPago6" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.tranPago6}} "  /></td>
+			<td><input name="origen6" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.origen6}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td><input name="tran7" type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.consDoctosCobrPG2.tran7}} "  /></td>
+			<td><input name="cobro7" type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.consDoctosCobrPG2.cobro7}} "  /></td>
+			<td><input name="fechDoc7" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.fechaDoc7}} "  /></td>
+			<td><input name="fecCob7" type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.consDoctosCobrPG2.fechaCobro7}} "  /></td>
+			<td><input name="monDoc7" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.montoDocto7}} "  /></td>
+			<td><input name="montoCobr7" type="text" ng-model="gra1" size="30"  placeholder=" {{objeto.consDoctosCobrPG2.montoCobrado7}} "  /></td>
+			<td><input name="tranPago7" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.tranPago7}} "  /></td>
+			<td><input name="origen7" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.origen7}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td><input name="tran8" type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.consDoctosCobrPG2.tran8}} "  /></td>
+			<td><input name="cobro8" type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.consDoctosCobrPG2.cobro8}} "  /></td>
+			<td><input name="fechDoc8" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.fechaDoc8}} "  /></td>
+			<td><input name="fecCob8" type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.consDoctosCobrPG2.fechaCobro8}} "  /></td>
+			<td><input name="monDoc8" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.montoDocto8}} "  /></td>
+			<td><input name="montoCobr8" type="text" ng-model="gra1" size="30"  placeholder=" {{objeto.consDoctosCobrPG2.montoCobrado8}} "  /></td>
+			<td><input name="tranPago8" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.tranPago8}} "  /></td>
+			<td><input name="origen8" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.origen8}} "  /></td>
+		</tr>
+		
+		<tr>
+			<td><input name="tran9" type="text" ng-model="gra1" size="2"  placeholder=" {{objeto.consDoctosCobrPG2.tran9}} "  /></td>
+			<td><input name="cobro9" type="text" ng-model="gra1" size="15"  placeholder=" {{objeto.consDoctosCobrPG2.cobro9}} "  /></td>
+			<td><input name="fechDoc9" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.fechaDoc9}} "  /></td>
+			<td><input name="fecCob9" type="text" ng-model="gra1" size="35"  placeholder=" {{objeto.consDoctosCobrPG2.fechaCobro9}} "  /></td>
+			<td><input name="monDoc9" type="text" ng-model="gra1" size="20"  placeholder=" {{objeto.consDoctosCobrPG2.montoDocto9}} "  /></td>
+			<td><input name="montoCobr9" type="text" ng-model="gra1" size="30"  placeholder=" {{objeto.consDoctosCobrPG2.montoCobrado9}} "  /></td>
+			<td><input name="tranPago9" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.tranPago9}} "  /></td>
+			<td><input name="origen9" type="text" ng-model="gra1" size="10"  placeholder=" {{objeto.consDoctosCobrPG2.origen9}} "  /></td>
+		</tr>		
+						
+	</table>
+	
+</div>
+
+</div>
+
+
+</form>
+
+
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">CONCEPTOS</button>
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">CONVERSIÓN DE MONEDA</button>
+	<button  type="button" id="F1" title="Aceptar cambios" name="btnF1" value=" ">INGRESOS</button>
+</div>
+
+
+</body>
+</html>

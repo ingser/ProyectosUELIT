@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html data-ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>IMPRESIÓN  DE COTIZACIONES</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/impresionCotizacionesJS.js"></script>
+
+</head>
+
+<body>
+
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IMPRESIÓN DE COTIZACIONES
+
+</div>	
+
+
+<form action="">
+
+
+<div ng-controller="myControllerImprCotiz" align="left">
+
+<br/>
+<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NÚMERO DE COTIZACIÓN&nbsp;&nbsp;&nbsp;
+<input type="text" ng-model="edoCte" size="5"  placeholder=" {{objeto.imprCotiz.num_cotiz}} " />
+
+</div>
+
+</form>
+
+
+
+<br/>
+<br/>
+<div align="center">
+	<button  type="button" id="F1" title="TOOL TIP" name="btnF1" value=" ">ACEPTAR</button>
+</div>
+
+
+</body>
+</html>

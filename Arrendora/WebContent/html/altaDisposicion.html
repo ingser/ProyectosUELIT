@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html ng-app="moduloMain">
+<head>
+<meta charset="ISO-8859-1">
+<title>ALTA DE DISPOSICIONES</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/altaDisposicionJS.js"></script>
+
+</head>
+
+<body>
+
+
+<br/>
+<div class=lblTitleHea>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANCO SANTANDER (MÉXICO), S.A.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARTERA
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ALTA DE DISPOSICIONES
+
+<br/>
+<br/>
+
+</div>
+
+
+<form action="">
+
+
+<div ng-controller="myController" align="left">
+
+<br/>
+<br/>
+
+<div ng-controller="myControllerAltaDisposicion">
+
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+DISPOSICIÓN:&nbsp;&nbsp;
+<input type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.altaDisposicion.disposicion}} " />
+				 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 
+FECHA: &nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="10"  placeholder=" {{objeto.altaDisposicion.fecha}} " />
+				
+				 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 
+MONTO: &nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.altaDisposicion.monto}} " />
+								
+<br />
+<br />
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+COTIZACIÓN:&nbsp;&nbsp;<input type="text" size="5" ng-model="ctes"  placeholder=" {{objeto.altaDisposicion.cotizacion}} " /> 
+<br />
+<br />				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CONTRATO:&nbsp;&nbsp;
+<input type="text" size="5" ng-model="ctes" placeholder=" {{objeto.altaDisposicion.contrato}} "  />
+				
+				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ANEXO: &nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.altaDisposicion.anexo}} " />
+<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				
+LÍNEA DISPONIBLE:&nbsp;&nbsp;
+<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.altaDisposicion.linea_disp}} " /> 
+				
+<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				
+MONTO ANTICIPOS:&nbsp;&nbsp; 
+<input type="text" ng-model="greeting" size="30"  placeholder=" {{objeto.altaDisposicion.monto_anticip}} " /> 				
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MONTO DESCONTAR:&nbsp;&nbsp;&nbsp;
+<input type="text" ng-model="edoCte" size="30" placeholder=" {{objeto.altaDisposicion.monto_descontar}} " /> 
+				
+<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MONTO A BONIFICAR:
+<input name="buc" type="text" size="30" ng-model="cvebuc" ng-pattern="/^[0-9]{1,8}$/" ng-minlength="8" ng-maxlength="8"
+				required  placeholder=" {{objeto.altaDisposicion.monto_bonificar}} " /> 
+				<span style="color: red;"
+				ng-show="index.buc.$touched && index.buc.$invalid"> MONTO es requerido a 8 posiciones. 
+				</span>				
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MONTO A RECUPERAR:&nbsp;&nbsp;&nbsp;
+				<input size="30" type="text" ng-model="greeting"  placeholder=" {{objeto.altaDisposicion.monto_recuperar}} " />
+			
+			<br /> <br /> 
+			
+</div>
+
+</div>
+
+</form>
+			
+			<br /> <br /> 
+
+
+	<br />
+	<div align="center">
+		<button type="button" id="F1" title=""
+			name="btnF1" value=" ">VER COTIZACIÓN</button>
+	</div>
+
+
+
+</body>
+</html>
