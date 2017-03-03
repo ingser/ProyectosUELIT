@@ -10,6 +10,7 @@ public class TelefonoFaxBean {
 	private String extA;
 	private String faxB;
 	private String extB;
+	
 	public String getTel1() {
 		return tel1;
 	}
