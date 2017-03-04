@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CLIENTES</title>
+<link rel="stylesheet" href="../css/apl_1.css"/>
+<script src="../lib/angular.js"></script>
+<script src="../js/indexJS.js"></script>
+
+</head>
+
+<body>
+
+<div ng-app="moduloMain" ng-controller="persona">
+
+<form ng-submit="agregar()">
+
+<label>ID: </label>
+<input type="text" name="id" id="id" ng-model="id" />
+<br/>
+<label>Nombre: </label>
+<input type="text" name="nombre" id="nombre" ng-model="nombre" />
+<br/>
+
+<input type="submit"  id="agrega" value="Agrega" />
+</form>
+
+
+</div>
+<script>
+var app = angular.module('moduloMain', []);
+app.controller('persona', function($scope){
+
+	$scope.agregar = function(){
+		var json = { id: $scope.id , nombre: $scope.nombre };
+		console.log(JSON.stringify(json));
+		$http.post("/cliente/actualizar", JSON.stringify(json))
+			.success(function(response){ alert(response); })
+			.error(function(data, status, header, config){ alert('NOK') });
+		
+	};
+
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>

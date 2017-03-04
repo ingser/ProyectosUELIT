@@ -1,12 +1,12 @@
 package mx.isban.arrendadora.modelo.bean;
 
 
-public class Cliente {
+public class ClientePruebaBean {
 
 	private String id;
 	private String nombre;
 	
-	public Cliente (String id, String nombre){
+	public ClientePruebaBean (String id, String nombre){
 		this.id = id;
 		this.nombre = nombre;
 	}
