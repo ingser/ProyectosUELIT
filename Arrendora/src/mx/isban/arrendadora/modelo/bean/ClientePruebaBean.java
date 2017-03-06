@@ -10,6 +10,10 @@ public class ClientePruebaBean {
 		this.id = id;
 		this.nombre = nombre;
 	}
+	
+	public ClientePruebaBean(){
+		
+	}
 
 	public String getId() {
 		return id;
