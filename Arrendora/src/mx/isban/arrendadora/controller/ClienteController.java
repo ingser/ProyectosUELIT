@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import mx.isban.arrendadora.modelo.bean.ClientePruebaBean;
+import mx.isban.arrendadora.modelo.contexto.PruebaJSONContexto;
 
 @RestController
 @RequestMapping(value = "/cliente")
@@ -39,10 +40,28 @@ public class ClienteController {
 	@RequestMapping(value = "/actualizar", method = RequestMethod.POST)
 	public ResponseEntity<ClientePruebaBean> actualizar(@RequestBody ClientePruebaBean prueba){
 		
+		System.out.println("ANTES " + prueba.getId() + " " + prueba.getNombre());
+		
 		prueba.setId(prueba.getId()+ " SERVER");
 		prueba.setNombre(prueba.getNombre()+ " SERVER");
 		
+		System.out.println("DESPUES " + prueba.getId() + " " + prueba.getNombre());
 		
 		return new ResponseEntity<ClientePruebaBean>(prueba, HttpStatus.OK);
 	}
+	
+	
+	@RequestMapping(value="/auto", method = RequestMethod.POST)
+	public ResponseEntity<PruebaJSONContexto> carro(@RequestBody PruebaJSONContexto ctx){
+		
+		System.out.println("CARRO INICIO");
+		
+		ctx.getCarro().setMarca(ctx.getCarro().getMarca() +  " SERVER");
+		ctx.getCliente().setId(ctx.getCliente().getId() + " SERVER");
+		
+		System.out.println("CARRO DESPUES");
+		
+		return new ResponseEntity<PruebaJSONContexto>(ctx, HttpStatus.OK);
+	}
+	
 }
