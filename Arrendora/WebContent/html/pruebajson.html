@@ -26,17 +26,50 @@
 </form>
 
 
+<form ng-submit="auto()">
+
+<label>ID: </label>
+<input type="text" name="id2" id="id2" ng-model="id2" />
+<br/>
+<label>Nombre: </label>
+<input type="text" name="nombre2" id="nombre2" ng-model="nombre2" />
+<br/>
+
+
+<label>Marca: </label>
+<input type="text" name="marca" id="marca" ng-model="marca" />
+<br/>
+<label>Modelo: </label>
+<input type="text" name="modelo" id="modelo" ng-model="modelo" />
+<br/>
+
+
+<input type="submit"  id="agrega" value="Auto" />
+</form>
+
+
 </div>
 <script>
 var app = angular.module('moduloMain', []);
-app.controller('persona', function($scope){
+app.controller('persona', function($scope, $http){
 
 	$scope.agregar = function(){
 		var json = { id: $scope.id , nombre: $scope.nombre };
 		console.log(JSON.stringify(json));
-		$http.post("/cliente/actualizar", JSON.stringify(json))
-			.success(function(response){ alert(response); })
-			.error(function(data, status, header, config){ alert('NOK') });
+		$http.post("../cliente/actualizar", JSON.stringify(json));
+		
+	};
+	
+	$scope.auto = function(){
+		var json = {
+			
+			carro: {id: $scope.id2 , nombre: $scope.nombre2} 
+			, cliente : {modelo: $scope.modelo,  marca: $scope.marca}
+		};
+	
+		console.log(JSON.stringify(json));
+		
+		$http.post("../cliente/auto", JSON.stringify(json));
 		
 	};
 
